@@ -1,3 +1,6 @@
+import Jeu1 from "../../assets/images/jeu1.jpeg";
+import Jeu2 from "../../assets/images/jeu2.jpeg";
+import Jeu3 from "../../assets/images/jeu3.jpeg";
 import styles from "./CarrousselsJeux.module.css";
 
 export default function CarrousselJeux() {
@@ -6,19 +9,19 @@ export default function CarrousselJeux() {
       <h2> Le top 3</h2>
       <div className={styles.carroussel}>
         <div className={styles.jeu}>
-          <img src="client/src/assets/images/jeu1.jpeg" alt="jeu 1" />
+          <img src={Jeu1} alt="jeu 1" />
           <button className={styles.buttonDiscover} type="button">
             Découvrir
           </button>
         </div>
         <div className={styles.jeu}>
-          <img src="client/src/assets/images/jeu2.jpeg" alt="jeu 2" />
+          <img src={Jeu2} alt="jeu 2" />
           <button className={styles.buttonDiscover} type="button">
             Découvrir
           </button>
         </div>
         <div className={styles.jeu}>
-          <img src="client/src/assets/images/jeu3.jpeg" alt="jeu 3" />
+          <img src={Jeu3} alt="jeu 3" />
           <button className={styles.buttonDiscover} type="button">
             Découvrir
           </button>

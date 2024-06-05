@@ -1,3 +1,5 @@
+import ChallengeImg from "../../assets/images/challenge.jpg"
+import Play from "../../assets/icones/play.png"
 import Styles from "./Challenge.module.css";
 
 export default function Challenge() {
@@ -7,10 +9,10 @@ export default function Challenge() {
       <div className={Styles.challenge}>
         <img
           className={Styles.challengeImg}
-          src="client/src/assets/images/challenge.jpg"
+          src={ChallengeImg}
           alt="jeu challenge"
         />
-        <img className={Styles.playIcon} src="client/src/assets/icones/play.png" alt="icone play" />
+        <img className={Styles.playIcon} src={Play} alt="icone play" />
       </div>
     </>
   );
