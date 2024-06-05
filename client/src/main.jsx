@@ -7,10 +7,15 @@ import App from "./App";
 
 const router = createBrowserRouter([
   {
+    element : <App />,
+    children : [
+
+  {
     path: "/",
     element: <App />,
   },
-]);
+  
+]}]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
