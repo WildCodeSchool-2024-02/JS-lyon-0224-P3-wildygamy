@@ -4,11 +4,19 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
+import DetailPage from "./pages/DetailPage/DetailPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    children: [
+      {
+        path: "games/:id",
+        element: <DetailPage/>,
+        loader: async () =>  fetch("http://localhost:3310/api/games"),
+      }
+    ]
   },
 ]);
 
