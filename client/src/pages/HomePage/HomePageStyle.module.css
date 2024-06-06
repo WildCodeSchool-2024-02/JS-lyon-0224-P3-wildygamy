@@ -24,10 +24,7 @@ body {
 }
 
 .button {
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem 3rem 0.5rem 3rem;
   border-radius: 1rem;
   border-style: none;
   color: #f8f7ff;
