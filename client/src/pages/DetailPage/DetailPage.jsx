@@ -10,9 +10,9 @@ export default function DetailPage(){
   const selectGame = games.filter((game) => parseInt(game.id, 10) === parseInt(id , 10))
   return (
     <div className={styles.containerDetail}>
-        <h2>{selectGame.name}</h2>
-        <image alt={selectGame.name} src={selectGame.image}/>
-        <p>{selectGame.synopsis}</p>
+        <h2>{selectGame[0].name}</h2>
+        <img alt={selectGame[0].name} src="../public/image_back/pac_man.webp"/>
+        <p>{selectGame[0].synopsis}</p>
     </div>
   )
 }
