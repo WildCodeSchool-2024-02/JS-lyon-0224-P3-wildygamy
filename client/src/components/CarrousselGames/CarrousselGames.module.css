@@ -1,0 +1,12 @@
+button {
+  background-color: var(--third-color);
+  color: black;
+  width: 10vw;
+  height: 5vh;
+  border-radius: 26%;
+}
+
+h2 {
+  text-align: center;
+  padding: 4rem 7rem;
+}

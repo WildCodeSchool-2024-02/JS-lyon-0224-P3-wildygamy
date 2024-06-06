@@ -1,0 +1,15 @@
+.challenge {
+  display: flex;
+  align-items: center;
+}
+.challengeImg {
+  height: 30vh;
+  width: auto;
+  border-radius: 4vh;
+}
+
+.playIcon {
+  width: 6rem;
+  height: auto;
+  z-index: 1;
+}

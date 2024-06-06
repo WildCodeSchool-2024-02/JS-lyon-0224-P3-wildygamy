@@ -1,7 +1,7 @@
 import Jeu1 from "../../assets/images/jeu1.jpeg";
 import Jeu2 from "../../assets/images/jeu2.jpeg";
 import Jeu3 from "../../assets/images/jeu3.jpeg";
-import styles from "./CarrousselsJeux.module.css";
+import styles from "./CarrousselGames.module.css";
 
 export default function CarrousselJeux() {
   return (
