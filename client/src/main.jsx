@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import MainPage from "./pages/MainPage/MainPage";
-
 import App from "./App";
 
 const router = createBrowserRouter([
@@ -12,8 +11,9 @@ const router = createBrowserRouter([
     children : [
 
   {
-    path: "/",
+    path: "/games",
     element: < MainPage />,
+    loader: async () => fetch("http://localhost:3310/api/games")
   },
   
 ]}]);

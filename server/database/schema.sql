@@ -9,6 +9,6 @@ create table game (
   name varchar(255) not null,
   category VARCHAR(100) not null,
   is_challenge BOOLEAN NOT NULL,
-  image BLOB,
+  image TEXT NOT NULL,
   synopsis TEXT NOT NULL
 );
