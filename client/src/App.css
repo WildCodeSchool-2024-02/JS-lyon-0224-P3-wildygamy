@@ -1,165 +1,89 @@
+/*==========CHARTE GRAPHIQUE==========*/
+
+:root {
+  /*COULEURS*/
+  --main-color: #a882dd;
+  --secondary-color: #2f3061;
+  --third-color: #fde74c;
+  --light-color: #f8f7ff;
+  --dark-color: #02020a;
+  --font-color: black;
+
+  /*POLICES*/
+
+  /* Titres */
+  --title-font-family: "Press Start 2P", system-ui;
+  --title-font-family-bold: "Press Start 2P", sans-serif, bold;
+  --title-font-family-italic: "Press Start 2P", sans-serif, italic;
+  --title-font-size: 1.2rem;
+
+  /* Générique */
+  --main-font-size: 0.8rem;
+  --main-font-family: "Verdana", "Geneva", "Tahoma", sans-serif;
+
+  /* Espace */
+  --spacing-little: 0.12rem;
+  --spacing-medium: 0.3rem;
+  --spacing-big: 0.75rem;
+}
+
+/*========== CSS BALISE HTML==========*/
+
+* {
+  padding: 0rem;
+  margin: 0rem;
+}
+
 body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #eee;
-  margin: 0;
+  margin: 0rem;
+  background-color: var(--dark-color);
 }
 
-.container {
-  height: 100vh;
-  background-image: url("./assets/images/background.webp");
-  background-size: cover;
-  background-position: top;
-  position: relative;
+h1 {
+  font-family: var(--title-font-family);
+  font-size: calc(1.5 * --title-font-size);
+  color: var(--third-color);
+  margin: 2.5rem;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 30px;
+  justify-content: center;
 }
 
-.logo {
-  font-size: 20px;
-  margin-top: 16px;
+h2 {
+  font-family: var(--title-font-family);
+  font-size: var(--title-font-size);
+  color: var(--third-color);
+  margin: 0.5rem;
 }
 
-.navbar ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
+h3 {
+  font-family: var(--title-font-family);
+  font-size: var(--title-font-size);
+  color: var(--dark-color);
+  margin: 0.5rem;
 }
 
-.navbar a {
+p {
+  font-family: var(--main-font-family);
+  font-size: var(--title-font-size);
+  color: var(--font-color);
+  margin: 0.5rem;
+}
+
+button {
+  cursor: pointer;
+
+  /* texte */
+  font-family: var(--title-font-family);
+  color: var(--light-color);
+  text-shadow: -0.13rem color var(--dark-color);
   text-decoration: none;
-  color: #eee;
-  display: flex;
-  gap: 5px;
-  justify-content: end;
-  margin-top: auto;
-  font-size: 15px;
+
+  /* border */
+  border-radius: 1rem;
 }
 
-.navbar a:hover {
-  scale: 110%;
-}
-
-.text-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.block-primary {
-  text-transform: uppercase;
-  margin-bottom: 30px;
-}
-
-.block-primary-main {
-  font-size: 50px;
-  font-weight: 400;
-  letter-spacing: 5px;
-  animation: blink 12s infinite;
-}
-
-.block-primary-sub {
-  display: block;
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 7px;
-}
-
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
+ul,
+li,
+a {
   text-decoration: none;
-  padding: 10px 20px;
-  display: inline-block;
-  border-radius: 100px;
-  transition: all 0.2s;
-  position: relative;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.btn-white {
-  background-color: #fff;
-  color: #777;
-  font-size: 14px;
-}
-
-footer {
-  position: absolute;
-  top: 85%;
-  left: 75%;
-}
-
-.wcs {
-  text-decoration: none;
-  color: #ff1493ad;
-}
-
-.wcs:hover {
-  border-bottom: solid 1px #ff1493ad;
-}
-
-@media screen and (max-width: 760px) {
-  .logo {
-    display: none;
-  }
-
-  .container {
-    justify-content: center;
-  }
-
-  footer {
-    position: absolute;
-    top: 85%;
-    left: 20%;
-  }
-}
-
-@media screen and (min-width: 761px) and (max-width: 960px) {
-  footer {
-    position: absolute;
-    top: 85%;
-    left: 60%;
-  }
-}
-
-@keyframes blink {
-  20%,
-  24%,
-  55% {
-    color: #111;
-    text-shadow: none;
-  }
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
-  100% {
-    text-shadow:
-      0 0 5px #ff1493ad,
-      0 0 15px #eee,
-      0 0 20px #ff1493ad,
-      0 0 40px #a00ac9,
-      0 0 60px #ff0000,
-      0 0 10px #970dc5,
-      0 0 98px #ff0000;
-    color: #fff;
-  }
 }
