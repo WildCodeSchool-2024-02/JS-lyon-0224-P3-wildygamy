@@ -11,7 +11,7 @@ export default function DetailPage(){
   return (
     <div className={styles.containerDetail}>
         <h2>{selectGame.name}</h2>
-        <image alt={selectGame.name} src={URL.createObjectURL(selectGame.image)}/>
+        <image alt={selectGame.name} src={selectGame.image}/>
         <p>{selectGame.synopsis}</p>
     </div>
   )
