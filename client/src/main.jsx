@@ -2,13 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import HomePage from "./pages/HomePage/HomePage"
 import MainPage from "./pages/MainPage/MainPage";
-import App from "./App";
 import DetailPage from "./pages/DetailPage/DetailPage";
 
 const router = createBrowserRouter([
   {
-    element: <App />,
+    element: < HomePage />,
     children: [
       {
         path: "/games",
