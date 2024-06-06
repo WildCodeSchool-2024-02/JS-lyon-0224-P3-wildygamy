@@ -1,0 +1,17 @@
+.containerDetail {
+  height: 80vh;
+}
+
+.imgDetail {
+  width: 80vw;
+}
+
+.containerDetail p {
+  font-family: var(--main-font-family);
+  color: var(--light-color);
+  font-size: 0.9rem;
+}
+
+.containerDetail h2 {
+  font-size: 1.5rem;
+}

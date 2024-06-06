@@ -11,7 +11,7 @@ export default function DetailPage(){
   return (
     <div className={styles.containerDetail}>
         <h2>{selectGame[0].name}</h2>
-        <img alt={selectGame[0].name} src="../public/image_back/pac_man.webp"/>
+        <img alt={selectGame[0].name} className={styles.imgDetail} src="../public/image_back/pac_man.webp"/>
         <p>{selectGame[0].synopsis}</p>
     </div>
   )
