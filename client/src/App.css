@@ -30,12 +30,12 @@
 /*========== CSS BALISE HTML==========*/
 
 * {
-  padding: 0rem;
-  margin: 0rem;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  margin: 0rem;
+  margin: 0;
   background-color: var(--dark-color);
 }
 

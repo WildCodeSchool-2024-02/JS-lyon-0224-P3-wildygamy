@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import {Link} from "react-router-dom";
 import Play from "../../assets/icones/play.png";
 import Styles from "./Challenge.module.css";
 
@@ -11,7 +12,9 @@ export default function Challenge({ game }) {
         src={game[0].image}
         alt={game[0].name}
       />
+      <Link to ="/games/1">
       <img className={Styles.playIcon} src={Play} alt="icone play" />
+      </Link>
     </div>
   );
 }
