@@ -1,32 +1,27 @@
-import Jeu1 from "../../assets/images/jeu1.jpeg";
-import Jeu2 from "../../assets/images/jeu2.jpeg";
-import Jeu3 from "../../assets/images/jeu3.jpeg";
+import PropTypes from "prop-types";
 import styles from "./CarrousselsJeux.module.css";
 
-export default function CarrousselJeux() {
+export default function CarrousselJeux({games}) {
   return (
     <>
-      <h2> Le top 3</h2>
+      <h2>Nos Jeux</h2>
       <div className={styles.carroussel}>
-        <div className={styles.jeu}>
-          <img src={Jeu1} alt="jeu 1" />
-          <button className={styles.buttonDiscover} type="button">
-            Découvrir
-          </button>
-        </div>
-        <div className={styles.jeu}>
-          <img src={Jeu2} alt="jeu 2" />
-          <button className={styles.buttonDiscover} type="button">
-            Découvrir
-          </button>
-        </div>
-        <div className={styles.jeu}>
-          <img src={Jeu3} alt="jeu 3" />
-          <button className={styles.buttonDiscover} type="button">
-            Découvrir
-          </button>
-        </div>
+        {games.map((game) => (
+           <li className="game-item" key={game.id}>
+            <img alt={game.name} src={game.image}/>
+          </li>
+        ))}
       </div>
     </>
   );
 }
+
+CarrousselJeux.propTypes = {
+  games: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      image: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired
+};
