@@ -4,13 +4,15 @@ import Styles from "./Challenge.module.css";
 
 export default function Challenge({ game }) {
   return (
-    <>
+    <div className={Styles.challenge}>
       <h2>Challenge : PAC MAN</h2>
-      <div className={Styles.challenge}>
-        <img className={Styles.challengeImg} src={game[0].image} alt={game[0].name} />
-        <img className={Styles.playIcon} src={Play} alt="icone play" />
-      </div>
-    </>
+      <img
+        className={Styles.challengeImg}
+        src={game[0].image}
+        alt={game[0].name}
+      />
+      <img className={Styles.playIcon} src={Play} alt="icone play" />
+    </div>
   );
 }
 

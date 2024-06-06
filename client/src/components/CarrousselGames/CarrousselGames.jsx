@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import styles from "./CarrousselsJeux.module.css";
+import styles from "./CarrousselGames.module.css";
 
 export default function CarrousselJeux({games}) {
   return (
@@ -7,8 +7,9 @@ export default function CarrousselJeux({games}) {
       <h2>Nos Jeux</h2>
       <div className={styles.carroussel}>
         {games.map((game) => (
-           <li className="game-item" key={game.id}>
-            <img alt={game.name} src={game.image}/>
+           <li className={styles.gameItem} key={game.id}>
+            <img className={styles.imageGames} alt={game.name} src={game.image}/>
+            <button type="button" className={styles.buttonGames}>Découvrir</button>
           </li>
         ))}
       </div>
