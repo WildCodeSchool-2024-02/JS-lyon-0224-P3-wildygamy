@@ -1,0 +1,89 @@
+/*==========CHARTE GRAPHIQUE==========*/
+
+:root {
+  /*COULEURS*/
+  --main-color: #a882dd;
+  --secondary-color: #2f3061;
+  --third-color: #fde74c;
+  --light-color: #f8f7ff;
+  --dark-color: #02020a;
+  --font-color: black;
+
+  /*POLICES*/
+
+  /* Titres */
+  --title-font-family: "Press Start 2P", system-ui;
+  --title-font-family-bold: "Press Start 2P", sans-serif, bold;
+  --title-font-family-italic: "Press Start 2P", sans-serif, italic;
+  --title-font-size: 1.2rem;
+
+  /* Générique */
+  --main-font-size: 0.8rem;
+  --main-font-family: "Verdana", "Geneva", "Tahoma", sans-serif;
+
+  /* Espace */
+  --spacing-little: 0.12rem;
+  --spacing-medium: 0.3rem;
+  --spacing-big: 0.75rem;
+}
+
+/*========== CSS BALISE HTML==========*/
+
+* {
+  padding: 0rem;
+  margin: 0rem;
+}
+
+body {
+  margin: 0rem;
+  background-color: var(--dark-color);
+}
+
+h1 {
+  font-family: var(--title-font-family);
+  font-size: calc(1.5 * --title-font-size);
+  color: var(--third-color);
+  margin: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  font-family: var(--title-font-family);
+  font-size: var(--title-font-size);
+  color: var(--third-color);
+  margin: 0.5rem;
+}
+
+h3 {
+  font-family: var(--title-font-family);
+  font-size: var(--title-font-size);
+  color: var(--dark-color);
+  margin: 0.5rem;
+}
+
+p {
+  font-family: var(--main-font-family);
+  font-size: var(--title-font-size);
+  color: var(--font-color);
+  margin: 0.5rem;
+}
+
+button {
+  cursor: pointer;
+
+  /* texte */
+  font-family: var(--title-font-family);
+  color: var(--light-color);
+  text-shadow: -0.13rem color var(--dark-color);
+  text-decoration: none;
+
+  /* border */
+  border-radius: 1rem;
+}
+
+ul,
+li,
+a {
+  text-decoration: none;
+}

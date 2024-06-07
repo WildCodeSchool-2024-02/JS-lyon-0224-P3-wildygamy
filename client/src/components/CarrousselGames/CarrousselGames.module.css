@@ -1,0 +1,44 @@
+.buttonGames {
+  background-color: var(--third-color);
+  color: black;
+  width: 20vw;
+  height: 5vh;
+  border-radius: 23px;
+  border: none;
+  position: absolute;
+  z-index: 1;
+  font-size: 0.35rem;
+
+  box-shadow:
+    0 2px 2px var(--third-color),
+    inset 0 0 1px var(--third-color),
+    0 0 5px yellow,
+    inset 0 0 5px var(--third-color),
+    0 0 4px var(--third-color),
+    inset 0 0 3px yellow;
+}
+.carroussel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.image_carroussel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameItem {
+  display: flex;
+  justify-content: center;
+}
+
+.imageGames {
+  width: 30vw;
+  height: 25vh;
+  border: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.75rem;
+}
