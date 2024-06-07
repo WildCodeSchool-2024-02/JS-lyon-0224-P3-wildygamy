@@ -1,0 +1,29 @@
+.challenge {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.challenge h2 {
+  font-size: 0.9rem;
+}
+.challengeImg {
+  height: auto;
+  width: 60vw;
+  border-radius: 4vh;
+  box-shadow:
+    0 0 15px var(--third-color),
+    inset 0 0 10px var(--third-color),
+    0 0 16px yellow,
+    inset 0 0 20px var(--third-color),
+    0 0 32px var(--third-color),
+    inset 0 0 45px yellow;
+}
+
+.playIcon {
+  position: absolute;
+  height: 10vh;
+  width: auto;
+  z-index: 2;
+  top: 58vh;
+}

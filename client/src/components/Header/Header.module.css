@@ -1,0 +1,35 @@
+.containerheader {
+  background-color: #a882dd;
+  margin: 0;
+  font-family: "Press Start 2P", system-ui;
+  font-size: 0.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 6rem;
+}
+
+.profil {
+  height: 3rem;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.link {
+  color: #02020a;
+  display: flex;
+  text-decoration: none;
+}
+
+.list_nosjeux {
+  padding-left: 2rem;
+}

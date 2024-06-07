@@ -1,0 +1,27 @@
+.containerFooter {
+  background-color: #a882dd;
+  padding: 1rem;
+  margin: 0;
+  font-family: "Press Start 2P", system-ui;
+  font-size: 0.6rem;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.link {
+  color: #02020a;
+  text-decoration: none;
+}
+
+.footerText {
+  display: flex;
+  justify-content: center;
+  color: #f7fff7;
+  padding-top: 1rem;
+  font-weight: normal;
+}

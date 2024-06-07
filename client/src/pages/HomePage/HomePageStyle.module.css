@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  background-image: url("../../assets/images/access.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 80%;
+  position: relative;
+  max-width: 100vw;
+  height: 100vh;
+}
+.containerhomepage {
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10rem;
+}
+
+.image {
+  height: 20rem;
+  width: 20rem;
+}
+
+.button {
+  padding: 0.5rem 3rem 0.5rem 3rem;
+  border-radius: 1rem;
+  border-style: none;
+  color: #f8f7ff;
+  font-size: 1.5rem;
+  background-color: #a882dd;
+  box-shadow:
+    0 0 8px #fff,
+    inset 0 0 8px #fff,
+    0 0 16px #a882dd,
+    inset 0 0 16px #a882dd,
+    0 0 32px #a882dd,
+    inset 0 0 32px #a882dd;
+}
+
+.connect {
+  color: #f8f7ff;
+  font-size: 1.2rem;
+}

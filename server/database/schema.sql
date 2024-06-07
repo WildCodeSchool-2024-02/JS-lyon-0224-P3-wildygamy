@@ -4,9 +4,11 @@ create table user (
   password varchar(255) not null
 );
 
-create table item (
+create table game (
   id int unsigned primary key auto_increment not null,
-  title varchar(255) not null,
-  user_id int unsigned not null,
-  foreign key(user_id) references user(id)
+  name varchar(255) not null,
+  category VARCHAR(100) not null,
+  is_challenge BOOLEAN NOT NULL,
+  image TEXT NOT NULL,
+  synopsis TEXT NOT NULL
 );
