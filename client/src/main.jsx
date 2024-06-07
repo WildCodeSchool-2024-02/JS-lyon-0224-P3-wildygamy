@@ -19,12 +19,12 @@ const router = createBrowserRouter([
       {
         path: "/games",
         element: <MainPage />,
-        loader: async () => fetch("http://localhost:3310/api/games"),
+        loader: async () => fetch(`${import.meta.env.VITE_API_URL}/api/games`),
       },
       {
         path: "games/:id",
         element: <DetailPage />,
-        loader: async () => fetch("http://localhost:3310/api/games"),
+        loader: async () => fetch(`${import.meta.env.VITE_API_URL}/api/games`),
       },
     ],
   },
