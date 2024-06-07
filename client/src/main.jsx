@@ -19,7 +19,7 @@ const router = createBrowserRouter([
   {
     path: "/games",
     element: < MainPage />,
-    loader: async () => fetch(`${import.meta.env.VITE_API_URL}api/games`)
+    loader: async () => fetch(`${import.meta.env.VITE_API_URL}/api/games`)
   }
   
 ]}]);
