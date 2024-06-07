@@ -11,7 +11,7 @@ export default function MainPage() {
   return (
     <div className={styles.containermainpage}>
      <Challenge game={challengeGame} />
-     <CarrousselGames  games={games}/>
+     <CarrousselGames games={games}/>
     </div>
   );
 }

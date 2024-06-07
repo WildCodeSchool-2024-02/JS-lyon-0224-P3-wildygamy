@@ -11,7 +11,7 @@ const read = async (req, res) => {
 
   const game = await tables.game.read(parsedId);
 
-  if (game != null) {
+  if (game !== null) {
     res.json(game);
   } else {
     res.sendStatus(404);
