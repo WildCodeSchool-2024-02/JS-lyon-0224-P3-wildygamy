@@ -16,7 +16,7 @@ export default function Footer() {
           </Link>
         </li>
       </ul>
-      <p className={styles.footerText}>Copyright (c) 2024 wildygamy</p>
+      <p className={styles.footerText}>Copyright © 2024 WildyGamy</p>
     </div>
   );
 }
