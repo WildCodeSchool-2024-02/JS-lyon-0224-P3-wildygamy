@@ -12,6 +12,7 @@ export default function Challenge({ game }) {
         alt={game[0].name}
       />
       <img className={Styles.playIcon} src={Play} alt="icone play" />
+      <p>{game[0].synopsis}</p>
     </div>
   );
 }
@@ -21,6 +22,7 @@ Challenge.propTypes = {
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       image: PropTypes.string.isRequired,
+      synopsis: PropTypes.string.isRequired,
     }).isRequired
   ).isRequired,
 };

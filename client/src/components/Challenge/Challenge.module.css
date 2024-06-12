@@ -20,6 +20,13 @@
     inset 0 0 45px yellow;
 }
 
+.challenge p {
+  font-family: var(--main-font-family);
+  color: var(--light-color);
+  font-size: 0.9rem;
+  padding-top: 2rem;
+}
+
 .playIcon {
   position: absolute;
   height: 10vh;
