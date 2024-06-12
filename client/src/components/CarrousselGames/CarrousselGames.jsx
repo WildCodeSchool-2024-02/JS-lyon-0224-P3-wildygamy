@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import styles from "./CarrousselGames.module.css";
 
@@ -15,9 +16,11 @@ export default function CarrousselJeux({ games }) {
               alt={game.name}
               src={game.image}
             />
-            <button type="button" className={styles.buttonGames}>
-              Découvrir
-            </button>
+            <Link to={`/games/${game.id}`}>
+              <button type="button" className={styles.buttonGames}>
+                Découvrir
+              </button>
+            </Link>
           </li>
         ))}
       </div>
