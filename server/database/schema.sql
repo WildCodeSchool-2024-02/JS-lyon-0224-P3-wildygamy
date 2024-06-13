@@ -14,10 +14,9 @@ create table game (
   synopsis TEXT NOT NULL
 );
 
-create table prize {
-  id int unsigned primary key auto_increment not null,
-  name varchar(80), not null,
+create table prize (
+  id INT unsigned PRIMARY KEY auto_increment NOT NULL,
+  name VARCHAR(80) NOT NULL,
   image TEXT NOT NULL,
-  points INT, not null,
- 
-}
+  points INT not null
+);
