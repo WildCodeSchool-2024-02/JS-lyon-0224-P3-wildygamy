@@ -5,7 +5,6 @@
   height: 5vh;
   border-radius: 23px;
   border: none;
-  position: absolute;
   z-index: 1;
   font-size: 0.35rem;
 
@@ -31,11 +30,14 @@
 .gameItem {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.2rem;
 }
 
 .imageGames {
   width: 30vw;
-  height: 25vh;
+  height: 16vh;
   border: 2rem;
   display: flex;
   justify-content: center;

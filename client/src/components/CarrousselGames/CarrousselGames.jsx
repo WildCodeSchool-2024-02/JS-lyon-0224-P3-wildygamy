@@ -11,16 +11,16 @@ export default function CarrousselJeux({ games }) {
       <div className={styles.carroussel}>
         {popularGames.map((game) => (
           <li className={styles.gameItem} key={game.id}>
-            <img
-              className={styles.imageGames}
-              alt={game.name}
-              src={game.image}
-            />
             <Link to={`/games/${game.id}`}>
               <button type="button" className={styles.buttonGames}>
                 Découvrir
               </button>
             </Link>
+            <img
+              className={styles.imageGames}
+              alt={game.name}
+              src={game.image}
+            />
           </li>
         ))}
       </div>
