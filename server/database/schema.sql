@@ -13,3 +13,10 @@ create table game (
   image TEXT NOT NULL,
   synopsis TEXT NOT NULL
 );
+
+create table prize (
+  id INT unsigned PRIMARY KEY auto_increment NOT NULL,
+  name VARCHAR(80) NOT NULL,
+  image TEXT NOT NULL,
+  points INT not null
+);
