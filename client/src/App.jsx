@@ -11,11 +11,11 @@ function App() {
     // Si hideHeaderFooter est false affiche le Header/Footer
 
     <>
-      {!hideHeaderFooter && <Header />}
+      {hideHeaderFooter === false && <Header />}
       <main>
         <Outlet />
       </main>
-      {!hideHeaderFooter && <Footer />}
+      {hideHeaderFooter === false && <Footer />}
     </>
   );
 }
