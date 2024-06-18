@@ -10,13 +10,13 @@ create table game (
   category VARCHAR(100) not null,
   is_challenge BOOLEAN NOT NULL,
   is_popular BOOLEAN NOT NULL,
-  image TEXT NOT NULL,
+  image VARCHAR(255) NOT NULL,
   synopsis TEXT NOT NULL
 );
 
 create table prize (
   id INT unsigned PRIMARY KEY auto_increment NOT NULL,
   name VARCHAR(80) NOT NULL,
-  image TEXT NOT NULL,
+  image VARCHAR(255) NOT NULL,
   points INT not null
 );
