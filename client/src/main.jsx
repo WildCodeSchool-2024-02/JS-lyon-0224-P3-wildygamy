@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import App from "./App"
-import HomePage from "./pages/HomePage/HomePage"
+import App from "./App";
+import HomePage from "./pages/HomePage/HomePage";
 
 import MainPage from "./pages/MainPage/MainPage";
 import DetailPage from "./pages/DetailPage/DetailPage";
@@ -11,18 +11,17 @@ import ConnexionPage from "./pages/ConnexionPage/ConnexionPage";
 
 const router = createBrowserRouter([
   {
-    element: < App />,
+    element: <App />,
     children: [
       {
-        path:"/",
-        element: <HomePage/>
+        path: "/",
+        element: <HomePage />,
       },
       {
-        path:"/connexion",
-        element: <ConnexionPage/>
-        
+        path: "/connexion",
+        element: <ConnexionPage />,
       },
-    
+
       {
         path: "/games",
         element: <MainPage />,
