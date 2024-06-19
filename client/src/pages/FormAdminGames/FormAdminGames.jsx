@@ -1,13 +1,10 @@
+import { Form } from "react-router-dom";
 import styles from "./FormAdminGames.module.css";
 
 function FormAdminGames() {
-  const action = (event) => {
-    event.preventDefault();
-  };
-
   return (
     <div className={styles["form-container"]}>
-      <form method="post" onSubmit={action}>
+      <Form method="post">
         <label htmlFor="GameName">Nom du jeu</label>
         <input type="text" id="GameName" name="GameName" />
 
@@ -31,9 +28,8 @@ function FormAdminGames() {
         <input type="text" id="SynopsisName" name="SynopsisName" />
 
         <button type="submit">Ajouter</button>
-      </form>
+      </Form>
     </div>
   );
 }
-
 export default FormAdminGames;
