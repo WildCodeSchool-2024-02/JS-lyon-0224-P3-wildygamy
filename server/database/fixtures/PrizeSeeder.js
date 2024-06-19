@@ -15,52 +15,52 @@ class PrizeSeeder extends AbstractSeeder {
     const prizes = [
       {
         name: "Eco-cup wildy Gamy",
-        image: "",
+        image: "/images_lots/eco-cup.png",
         points: "100",
       },
       {
         name: "Bonnet Wildy Gamy",
-        image: "",
+        image: "/images_lots/bonnet.png",
         points: "200",
       },
       {
         name: "Casquette Wildy-Gamy",
-        image: "",
+        image: "/images_lots/casquette.png",
         points: "300",
       },
       {
         name: "T-shirt Wildy Gamy",
-        image: "",
+        image: "/images_lots/t-shirt-noir.png",
         points: "500",
       },
       {
         name: "Tot bag Wildy-Gamy",
-        image: "",
+        image: "/images_lots/tot-bag.png",
         points: "600",
       },
       {
         name: "Mug",
-        image: "",
+        image: "/images_lots/mug.png",
         points: "700",
       },
       {
         name: "Pokemon",
-        image: "",
+        image: "/images_lots/pikachu.png",
         points: "1000",
       },
       {
         name: "Steam Card",
-        image: "",
+        image: "/images_lots/pas-dimage.png",
         points: "1500",
       },
       {
         name: "Une journée d'accès à la salle Wildy-Gamy",
-        image: "",
+        image: "/images_lots/pas-dimage.png",
         points: "2500",
       },
       {
         name: "Nintendo 64",
-        image: "",
+        image: "/images_lots/pas-dimage.png",
         points: "5000",
       },
     ];
