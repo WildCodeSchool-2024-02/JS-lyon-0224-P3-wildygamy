@@ -22,13 +22,29 @@ label {
   color: #02020a;
 }
 
-input {
+input[type="text"] {
   margin-bottom: 15px;
   padding: 10px;
   border: 1px solid #f8f7ff;
   border-radius: 4px;
   font-size: 14px;
   background-color: #f8f7ff;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.checkbox-container label {
+  margin-right: 10px;
+  width: 100px;
+}
+
+.checkbox-container input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
 }
 
 button {
