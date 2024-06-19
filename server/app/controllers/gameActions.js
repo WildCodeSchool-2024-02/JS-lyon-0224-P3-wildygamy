@@ -16,6 +16,6 @@ const read = async (req, res) => {
   } else {
     res.sendStatus(404);
   }
-};  
+};
 
 module.exports = { browse, read };
