@@ -2,19 +2,20 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import App from "./App"
-import HomePage from "./pages/HomePage/HomePage"
+import App from "./App";
+import HomePage from "./pages/HomePage/HomePage";
 
 import MainPage from "./pages/MainPage/MainPage";
 import DetailPage from "./pages/DetailPage/DetailPage";
+import PrizePage from "./pages/PrizePage/PrizePage";
 
 const router = createBrowserRouter([
   {
-    element: < App />,
+    element: <App />,
     children: [
       {
-        path:"/",
-        element: <HomePage/>
+        path: "/",
+        element: <HomePage />,
       },
       {
         path: "/games",
@@ -25,6 +26,11 @@ const router = createBrowserRouter([
         path: "games/:id",
         element: <DetailPage />,
         loader: async () => fetch(`${import.meta.env.VITE_API_URL}/api/games`),
+      },
+      {
+        path: "/prizes",
+        element: <PrizePage />,
+        loader: async () => fetch(`${import.meta.env.VITE_API_URL}/api/prizes`),
       },
     ],
   },
