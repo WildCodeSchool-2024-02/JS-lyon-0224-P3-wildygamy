@@ -1,0 +1,37 @@
+.connexionCard {
+  background-color: var(--dark-color);
+  opacity: 80%;
+  width: 65vw;
+  height: 80vh;
+  border: var(--light-color) solid 2px;
+  border-radius: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+}
+
+.logoConnexion {
+  width: 20vw;
+  height: auto;
+  padding: 1.5rem 0;
+}
+
+.connexionCard > h3 {
+  color: var(--third-color);
+  font-size: 1em;
+}
+
+.connexionCard > h4 {
+  color: var(--light-color);
+  font-size: 0.85em;
+  font-weight: 30;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.buttonConnexion {
+  width: 60vw;
+  height: 5vh;
+  background-color: var(--main-color);
+  color: var(--light-color);
+}
