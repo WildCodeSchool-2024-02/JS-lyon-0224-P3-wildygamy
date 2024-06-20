@@ -11,7 +11,9 @@ export default function HomePage() {
           Entrer
         </button>
       </Link>
+      <Link to="/connexion">
       <p className={styles.connect}>Se connecter</p>
+      </Link>
     </div>
   );
 }
