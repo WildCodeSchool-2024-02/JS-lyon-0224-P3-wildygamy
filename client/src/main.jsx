@@ -11,6 +11,8 @@ import FormAdminGames from "./pages/FormAdminGames/FormAdminGames";
 import PrizePage from "./pages/PrizePage/PrizePage";
 import ConnexionPage from "./pages/ConnexionPage/ConnexionPage";
 
+const ApiUrl = import.meta.env.VITE_API_URL;
+
 const router = createBrowserRouter([
   {
     element: <App />,
@@ -27,12 +29,12 @@ const router = createBrowserRouter([
       {
         path: "/games",
         element: <MainPage />,
-        loader: async () => fetch(`${import.meta.env.VITE_API_URL}/api/games`),
+        loader: async () => fetch(`${ApiUrl}/api/games`),
       },
       {
         path: "games/:id",
         element: <DetailPage />,
-        loader: async () => fetch(`${import.meta.env.VITE_API_URL}/api/games`),
+        loader: async () => fetch(`${ApiUrl}/api/games`),
       },
       {
         path: "admin/games",
