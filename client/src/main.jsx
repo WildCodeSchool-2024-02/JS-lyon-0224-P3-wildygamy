@@ -62,15 +62,15 @@ const router = createBrowserRouter([
             synopsisName,
           };
 
-          const response = await fetch(`${ApiUrl}/api/games/add`, {
+          let response = await fetch(`${ApiUrl}/api/games/add`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
             body: JSON.stringify(game),
           });
-
-          return redirect(`/games/${response.data.insertId}`);
+          response = await response.json();
+          return redirect(`/games/${response.insertId}`);  
         },
       },
       {
