@@ -8,6 +8,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import MainPage from "./pages/MainPage/MainPage";
 import DetailPage from "./pages/DetailPage/DetailPage";
 import FormAdminGames from "./pages/FormAdminGames/FormAdminGames";
+import PrizePage from "./pages/PrizePage/PrizePage";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,11 @@ const router = createBrowserRouter([
       {
         path: "admin/games",
         element: <FormAdminGames />,
+      },
+      {
+        path: "/prizes",
+        element: <PrizePage />,
+        loader: async () => fetch(`${import.meta.env.VITE_API_URL}/api/prizes`),
       },
     ],
   },
