@@ -6,4 +6,4 @@ const browse = async (req, res) => {
   res.json(prizesfromDB);
 };
 
-module.exports = {browse};
+module.exports = { browse };
