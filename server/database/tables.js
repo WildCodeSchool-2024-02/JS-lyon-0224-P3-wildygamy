@@ -12,7 +12,7 @@ const tables = {};
 // Register each repository as data access point for its table
 
 tables.game = new GameRepository();
-tables.prize= new PrizeRepository();
+tables.prize = new PrizeRepository();
 
 /* ************************************************************************* */
 
