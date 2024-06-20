@@ -17,5 +17,15 @@ const read = async (req, res) => {
     res.sendStatus(404);
   }
 };
+const add = async (req, res, next) => {
+  const item = req.body;
 
-module.exports = { browse, read };
+  try {
+    const insertId = await tables.game.create(item);
+    res.status(201).json({ insertId });
+  } catch (err) {
+    next(err);
+  }
+};
+
+module.exports = { browse, read, add };

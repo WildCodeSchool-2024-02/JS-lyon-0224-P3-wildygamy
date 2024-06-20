@@ -27,6 +27,30 @@ class GameRepository extends AbstractRepository {
     // Return the array of items
     return rows;
   }
+
+  async create(game) {
+    let gameChallenge = false;
+    let gamePopular = false;
+    if (game.challengeName === "on") {
+      gameChallenge = true;
+    }
+    if (game.popularName === "on") {
+      gamePopular = true;
+    }
+
+    const [result] = await this.database.query(
+      `insert into ${this.table} (name, category, is_challenge, is_popular, image, synopsis) values (?, ?, ?, ?, ?, ?)`,
+      [
+        game.gameName,
+        game.categoryName,
+        gameChallenge,
+        gamePopular,
+        game.imageName,
+        game.synopsisName
+      ]
+    );
+    return result.insertId;
+  }
 }
 
 module.exports = GameRepository;

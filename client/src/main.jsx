@@ -1,6 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  redirect,
+} from "react-router-dom";
 
 import App from "./App";
 import HomePage from "./pages/HomePage/HomePage";
@@ -39,6 +43,35 @@ const router = createBrowserRouter([
       {
         path: "admin/games",
         element: <FormAdminGames />,
+        action: async ({ request }) => {
+          const formData = await request.formData();
+
+          const gameName = formData.get("GameName");
+          const categoryName = formData.get("CategoryName");
+          const challengeName = formData.get("ChallengeName");
+          const popularName = formData.get("PopularName");
+          const imageName = formData.get("ImageName");
+          const synopsisName = formData.get("SynopsisName");
+
+          const game = {
+            gameName,
+            categoryName,
+            challengeName,
+            popularName,
+            imageName,
+            synopsisName,
+          };
+
+          let response = await fetch(`${ApiUrl}/api/games/add`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(game),
+          });
+          response = await response.json();
+          return redirect(`/games/${response.insertId}`);  
+        },
       },
       {
         path: "/prizes",
