@@ -54,7 +54,7 @@ class PrizeSeeder extends AbstractSeeder {
         points: "1500",
       },
       {
-        name: "Une journée d'accès à la salle Wildy-Gamy",
+        name: "Pass journée Wildy-Gamy",
         image: "",
         points: "2500",
       },
