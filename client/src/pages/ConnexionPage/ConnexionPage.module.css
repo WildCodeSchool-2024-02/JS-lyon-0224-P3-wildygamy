@@ -56,7 +56,10 @@
 .formConnexion {
   display: flex;
   flex-direction: column;
+  background: none;
   align-content: center;
+  padding: 0;
+  width: 28vh;
   gap: 1.2rem;
 }
 
