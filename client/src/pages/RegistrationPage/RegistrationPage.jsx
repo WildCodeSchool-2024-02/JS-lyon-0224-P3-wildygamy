@@ -1,8 +1,9 @@
 import { Form } from "react-router-dom";
+import styles from "./RegistrationPage.module.css";
 
 export default function RegistrationPage() {
   return (
-    <Form method="post">
+    <Form method="post" className={styles.formRegistration}>
       <label htmlFor="username">Pseudonyme</label>{" "}
       <input
         placeholder="Zelda55"

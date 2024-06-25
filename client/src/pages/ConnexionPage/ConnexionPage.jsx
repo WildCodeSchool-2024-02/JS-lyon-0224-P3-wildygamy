@@ -4,6 +4,7 @@ import Logo from "../../assets/icones/logo.png";
 
 import styles from "./ConnexionPage.module.css";
 
+
 export default function ConnexionPage() {
   return (
     <div className={styles.backgroundConnexionPage}>
