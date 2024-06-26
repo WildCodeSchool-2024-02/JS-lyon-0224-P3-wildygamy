@@ -4,6 +4,7 @@ import styles from "./RegistrationPage.module.css";
 export default function RegistrationPage() {
   return (
     <div className={styles.backgroundRegistration}>
+      <h3>Créer votre profil</h3>
       <Form method="post" className={styles.formRegistration}>
         <label htmlFor="username">Pseudonyme</label>{" "}
         <input
