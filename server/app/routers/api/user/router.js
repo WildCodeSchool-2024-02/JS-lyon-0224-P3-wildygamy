@@ -2,7 +2,7 @@ const express = require("express");
 
 const router = express.Router();
 
-const { hashpassword } = require("../../../services/auth");
+const { hashPassword } = require("../../../services/auth");
 
 // Import item-related actions
 const { browse, add } = require("../../../controllers/userActions");
@@ -11,6 +11,6 @@ const { browse, add } = require("../../../controllers/userActions");
 router.get("/", browse);
 
 // Route to add a new user
-router.post("/add", hashpassword , add);
+router.post("/add", hashPassword , add);
 
 module.exports = router;
