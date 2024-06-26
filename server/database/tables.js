@@ -1,6 +1,7 @@
 // Import the repository modules responsible for handling data operations on the tables
 const GameRepository = require("./models/GameRepository");
 const PrizeRepository = require("./models/PrizeRepository");
+const UserRepository = require("./models/UserRepository");
 
 // Create an empty object to hold data repositories for different tables
 const tables = {};
@@ -13,6 +14,7 @@ const tables = {};
 
 tables.game = new GameRepository();
 tables.prize = new PrizeRepository();
+tables.user = new UserRepository();
 
 /* ************************************************************************* */
 

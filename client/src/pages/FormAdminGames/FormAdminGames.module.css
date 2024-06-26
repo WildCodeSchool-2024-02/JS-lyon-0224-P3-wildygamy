@@ -6,7 +6,7 @@
   background-color: #02020a;
 }
 
-form {
+.formAdmin {
   display: flex;
   flex-direction: column;
   width: 300px;
@@ -16,13 +16,13 @@ form {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-label {
+.formAdmin label {
   margin-bottom: 5px;
   font-weight: bold;
   color: #02020a;
 }
 
-input[type="text"] {
+.formAdmin input[type="text"] {
   margin-bottom: 15px;
   padding: 10px;
   border: 1px solid #f8f7ff;
@@ -47,7 +47,7 @@ input[type="text"] {
   height: 20px;
 }
 
-button {
+.formAdmin button {
   padding: 10px;
   background-color: #02020a;
   border: none;
