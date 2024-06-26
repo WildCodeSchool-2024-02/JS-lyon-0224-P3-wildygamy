@@ -7,7 +7,7 @@ class UserRepository extends AbstractRepository {
 
   async create(user) {
     const [result] = await this.database.query(
-      `insert into ${this.table} (pseudo, lastname, firstname, email, hashed_password) values (?,?,?,?, ?)`,
+      `insert into ${this.table} (pseudo, lastname, firstname, email, password) values (?,?,?,?, ?)`,
       [
         user.username,
         user.lastname,
@@ -37,7 +37,7 @@ class UserRepository extends AbstractRepository {
     return rows;
   }
 
-  async readbypseudo(pseudo) {
+  async isPseudoExist(pseudo) {
     let validPseudo = true;
     const [rows] = await this.database.query(
       `select pseudo from ${this.table} where pseudo = ?`,

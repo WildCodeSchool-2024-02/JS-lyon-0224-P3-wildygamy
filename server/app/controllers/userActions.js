@@ -8,15 +8,15 @@ const browse = async (req, res) => {
 
 const add = async (req, res, next) => {
   const item = req.body;
-  const pseudoExist = await tables.user.readbypseudo(item.username)
+  const pseudoExist = await tables.user.isPseudoExist(item.username)
 
   try {
     if(pseudoExist===false){
-    const insertId = await tables.user.create(item);
-    res.status(201).json({ insertId });
+      const insertId = await tables.user.create(item);
+      res.status(201).json({ insertId });
     }
     else{
-    res.send(401)
+      res.sendStatus(401)
     }
   }
    catch (err) {
