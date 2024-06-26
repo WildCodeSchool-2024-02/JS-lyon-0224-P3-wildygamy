@@ -14,7 +14,7 @@ import DetailPage from "./pages/DetailPage/DetailPage";
 import FormAdminGames from "./pages/FormAdminGames/FormAdminGames";
 import PrizePage from "./pages/PrizePage/PrizePage";
 import ConnexionPage from "./pages/ConnexionPage/ConnexionPage";
-import RegistrationPage from "./pages/RegistrationPage/RegistrationPage"
+import RegistrationPage from "./pages/RegistrationPage/RegistrationPage";
 
 const ApiUrl = import.meta.env.VITE_API_URL;
 
@@ -51,6 +51,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <HomePage />,
       },
+      
       {
         path: "/connexion",
         element: <ConnexionPage />,
@@ -59,7 +60,6 @@ const router = createBrowserRouter([
         path: "/registration",
         element: <RegistrationPage handleSignUp={handleSignUp}/>,
       },
-
       {
         path: "/games",
         element: <MainPage />,
@@ -70,6 +70,7 @@ const router = createBrowserRouter([
         element: <DetailPage />,
         loader: async () => fetch(`${ApiUrl}/api/games`),
       },
+
       {
         path: "admin/games",
         element: <FormAdminGames />,
@@ -100,7 +101,7 @@ const router = createBrowserRouter([
             body: JSON.stringify(game),
           });
           response = await response.json();
-          return redirect(`/games/${response.insertId}`);  
+          return redirect(`/games/${response.insertId}`);
         },
       },
       {
