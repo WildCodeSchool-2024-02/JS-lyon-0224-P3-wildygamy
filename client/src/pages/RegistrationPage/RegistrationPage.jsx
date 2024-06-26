@@ -245,7 +245,7 @@ export default function RegistrationPage(handleSignUp) {
       {formErrors.password2 !== "" && (
             <div className="error">{formErrors.password2}</div>
           )}
-      <button type="submit" aria-label="Valider votre compte" onSubmit={handleSubmit}>
+      <button type="submit" aria-label="Valider votre compte" onSubmit={handleSubmit()}>
         {" "}
         Valider
       </button>
