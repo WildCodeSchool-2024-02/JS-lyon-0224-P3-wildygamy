@@ -2,14 +2,15 @@ const express = require("express");
 
 const router = express.Router();
 
+const { hashPassword } = require("../../../services/auth");
+
 // Import item-related actions
-const { browse, read, add } = require("../../../controllers/prizeAction");
+const { browse, add } = require("../../../controllers/userActions");
 
 // Route to get a list of user
 router.get("/", browse);
 
-// Route to get a specific user by ID
-router.get("/:id", read);
-
 // Route to add a new user
-router.post("/add", add);
+router.post("/add", hashPassword , add);
+
+module.exports = router;

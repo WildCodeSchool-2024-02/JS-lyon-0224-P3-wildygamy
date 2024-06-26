@@ -5,10 +5,17 @@ class UserRepository extends AbstractRepository {
     super({ table: "user" });
   }
 
-  async create(user) {
+  async create(user, role = "membre") {
     const [result] = await this.database.query(
-      `insert into ${this.table} (email, hashed_password) values (?, ?)`,
-      [user.email, user.hashedPassword]
+      `insert into ${this.table} (pseudo, lastname, firstname, email, role, password) values (?,?,?,?, ?, ?)`,
+      [
+        user.username,
+        user.lastname,
+        user.firstname,
+        user.mail,
+        role,
+        user.hashedPassword,
+      ]
     );
 
     return result.insertId;
@@ -29,6 +36,18 @@ class UserRepository extends AbstractRepository {
     );
 
     return rows;
+  }
+
+  async isPseudoExist(pseudo) {
+    let validPseudo = true;
+    const [rows] = await this.database.query(
+      `select pseudo from ${this.table} where pseudo = ?`,
+      [pseudo]
+    );
+    if (rows.length === 0) {
+      validPseudo = false;
+    }
+    return validPseudo    
   }
 
   async readByEmailWithPassword(email) {
