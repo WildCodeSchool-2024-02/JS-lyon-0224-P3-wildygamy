@@ -7,8 +7,14 @@ class UserRepository extends AbstractRepository {
 
   async create(user) {
     const [result] = await this.database.query(
-      `insert into ${this.table} (email, hashed_password) values (?, ?)`,
-      [user.email, user.hashedPassword]
+      `insert into ${this.table} (pseudo, lastname, firstname, email, hashed_password) values (?,?,?,?, ?)`,
+      [
+        user.username,
+        user.lastname,
+        user.firstname,
+        user.mail,
+        user.hashedPassword,
+      ]
     );
 
     return result.insertId;
@@ -29,6 +35,18 @@ class UserRepository extends AbstractRepository {
     );
 
     return rows;
+  }
+
+  async readbypseudo(pseudo) {
+    let validPseudo = true;
+    const [rows] = await this.database.query(
+      `select pseudo from ${this.table} where pseudo = ?`,
+      [pseudo]
+    );
+    if (rows.length === 0) {
+      validPseudo = false;
+    }
+    return validPseudo    
   }
 
   async readByEmailWithPassword(email) {

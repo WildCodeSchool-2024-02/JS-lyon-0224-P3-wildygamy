@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router();
 
 // Import item-related actions
-const { browse, read, add } = require("../../../controllers/prizeAction");
+const { browse, read, add } = require("../../../controllers/userActions");
 
 // Route to get a list of user
 router.get("/", browse);
