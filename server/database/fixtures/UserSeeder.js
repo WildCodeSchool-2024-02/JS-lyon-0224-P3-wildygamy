@@ -12,6 +12,10 @@ class UserSeeder extends AbstractSeeder {
         email: this.faker.internet.email(),
         /* eslint-disable no-await-in-loop */
         password: await argon2.hash(this.faker.internet.password()),
+        pseudo: this.faker.internet.displayName(),
+        lastname: this.faker.person.lastName(),
+        firstname: this.faker.person.firstName(),
+        role: "admin",
         refName: `user_${i}`,
       };
 
