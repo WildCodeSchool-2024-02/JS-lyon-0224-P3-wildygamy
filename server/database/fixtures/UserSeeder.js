@@ -1,3 +1,4 @@
+const argon2 = require("argon2");
 const AbstractSeeder = require("./AbstractSeeder");
 
 class UserSeeder extends AbstractSeeder {
@@ -5,12 +6,12 @@ class UserSeeder extends AbstractSeeder {
     super({ table: "user", truncate: true });
   }
 
-  run() {
+  async run() {
     for (let i = 0; i < 10; i += 1) {
       const fakeUser = {
         email: this.faker.internet.email(),
-        password: this.faker.internet.password(),
-        role: "admin",
+        /* eslint-disable no-await-in-loop */
+        password: await argon2.hash(this.faker.internet.password()),
         refName: `user_${i}`,
       };
 
