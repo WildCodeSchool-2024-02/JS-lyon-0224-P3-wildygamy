@@ -1,0 +1,12 @@
+.backgroundRegistration {
+  background-image: url("../../assets/images/background_purple.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 80%;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
