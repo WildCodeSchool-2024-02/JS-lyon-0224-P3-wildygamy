@@ -1,5 +1,8 @@
 create table user (
   id int unsigned primary key auto_increment not null,
+  pseudo varchar(50) not null unique,
+  lastname varchar(50) not null,
+  firstname varchar(50) not null,
   email varchar(255) not null unique,
   role varchar(50) not null,
   password varchar(255) not null
