@@ -20,7 +20,7 @@ const ApiUrl = import.meta.env.VITE_API_URL;
 
 const handleSignUp = async ({ formData }) => {
   try {
-    const response = await fetch(`${ApiUrl}/api/users`, {
+    const response = await fetch(`${ApiUrl}/api/user`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
