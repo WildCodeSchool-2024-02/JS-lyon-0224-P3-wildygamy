@@ -153,7 +153,6 @@ export default function RegistrationPage(handleSignUp) {
       firstname: registerForm.firstname,
       mail: registerForm.mail,
       password: registerForm.password,
-      password2: registerForm.password2,
     };
 
     if (validInputs()) {

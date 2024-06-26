@@ -20,13 +20,17 @@ const ApiUrl = import.meta.env.VITE_API_URL;
 
 const handleSignUp = async ({ formData }) => {
   try {
-    const response = await fetch(`${ApiUrl}/api/user`, {
+    const response = await fetch(`${ApiUrl}/api/user/add`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
     });
+
+    if(response.status === 401){
+      alert("Le pseudo existe")
+    }
 
     if (response.status !== 201) {
       const errorData = await response.json();
