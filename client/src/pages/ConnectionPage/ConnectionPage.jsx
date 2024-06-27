@@ -2,21 +2,21 @@ import { Form } from "react-router-dom";
 
 import Logo from "../../assets/icones/logo.png";
 
-import styles from "./ConnexionPage.module.css";
+import styles from "./ConnectionPage.module.css";
 
+export default function ConnectionPage() {
 
-export default function ConnexionPage() {
   return (
-    <div className={styles.backgroundConnexionPage}>
-      <div className={styles.connexionCard}>
+    <div className={styles.backgroundconnectionPage}>
+      <div className={styles.connectionCard}>
         <img
-          className={styles.logoConnexion}
+          className={styles.logoconnection}
           src={Logo}
           alt="logo wildy gamy"
         />
-        <h3>Connexion</h3>
+        <h3>connection</h3>
 
-        <Form method="post" className={styles.formConnexion}>
+        <Form method="post" className={styles.formconnection}>
           <label htmlFor="username">Pseudonyme ou Mail</label>{" "}
           <input
             placeholder="Zelda55"
@@ -33,12 +33,12 @@ export default function ConnexionPage() {
             aria-label=" Entrer mot de passe"
           />
           <button
-            className={styles.buttonConnexion}
+            className={styles.buttonconnection}
             type="submit"
-            aria-label="Connexion"
+            aria-label="connection"
           >
             {" "}
-            Connexion
+            connection
           </button>
           <button
             className={styles.buttonCreateProfil}
