@@ -154,7 +154,7 @@ export default function RegistrationPage({ handleSignUp }) {
       password: registerForm.password,
     };
 
-    if (validInputs()) {
+    if (validInputs() === true) {
       const result = await handleSignUp({ formData });
 
       if (result.success) {
