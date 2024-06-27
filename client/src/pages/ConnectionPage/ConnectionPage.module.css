@@ -14,7 +14,7 @@
 /* CARD */
 .connectionCard {
   background-color: var(--dark-color);
-  opacity: 0.8;
+  opacity: 0.95;
   width: 67vw;
   height: 92vh;
   border: var(--light-color) solid 2px;
@@ -29,7 +29,7 @@
 .logoconnection {
   width: 20vw;
   height: auto;
-  padding: 0.7rem 0 0.8rem 0;
+  padding: 5rem 0 0.8rem 0;
 }
 
 /* titre connection */
