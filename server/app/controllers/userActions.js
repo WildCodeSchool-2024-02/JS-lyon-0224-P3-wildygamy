@@ -9,7 +9,7 @@ const read = async (req, res, next) => {
   try {
     const user = await tables.user.read(req.params.id);
 
-    if (user == null) {
+    if (user === null) {
       res.sendStatus(404);
     } else {
       res.json(user);
