@@ -16,7 +16,7 @@ export default function ConnexionPage() {
         <h3>Connexion</h3>
 
         <Form method="post" className={styles.formConnexion}>
-          <label htmlFor="username">Pseudonyme ou Mail</label>{" "}
+          <label htmlFor="username">Pseudonyme ou Mail</label>
           <input
             placeholder="Zelda55"
             type="text"
@@ -24,7 +24,7 @@ export default function ConnexionPage() {
             name="username"
             aria-label="Entrer pseudoname ou mail"
           />
-          <label htmlFor="password">Mot de passe</label>{" "}
+          <label htmlFor="password">Mot de passe</label>
           <input
             type="password"
             id="password"
@@ -36,7 +36,6 @@ export default function ConnexionPage() {
             type="submit"
             aria-label="Connexion"
           >
-            {" "}
             Connexion
           </button>
           <button
@@ -44,7 +43,6 @@ export default function ConnexionPage() {
             type="submit"
             aria-label="Créer un profil"
           >
-            {" "}
             Créer un compte
           </button>
         </Form>
