@@ -14,7 +14,7 @@ export default function ConnectionPage() {
           src={Logo}
           alt="logo wildy gamy"
         />
-        <h3>connection</h3>
+        <h3>Connexion</h3>
 
         <Form method="post" className={styles.formconnection}>
           <label htmlFor="username">Pseudonyme ou Mail</label>{" "}
@@ -37,15 +37,15 @@ export default function ConnectionPage() {
             type="submit"
             aria-label="connection"
           >
-            {" "}
-            connection
+        
+            Connexion
           </button>
           <button
             className={styles.buttonCreateProfil}
             type="submit"
             aria-label="Créer un profil"
           >
-            {" "}
+          
             Créer un compte
           </button>
         </Form>
