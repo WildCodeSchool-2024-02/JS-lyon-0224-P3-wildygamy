@@ -2,21 +2,21 @@ import { Form } from "react-router-dom";
 
 import Logo from "../../assets/icones/logo.png";
 
-import styles from "./ConnexionPage.module.css";
+import styles from "./ConnectionPage.module.css";
 
-export default function ConnexionPage() {
+export default function ConnectionPage() {
   return (
-    <div className={styles.backgroundConnexionPage}>
-      <div className={styles.connexionCard}>
+    <div className={styles.backgroundconnectionPage}>
+      <div className={styles.connectionCard}>
         <img
-          className={styles.logoConnexion}
+          className={styles.logoconnection}
           src={Logo}
           alt="logo wildy gamy"
         />
-        <h3>Connexion</h3>
+        <h3>connection</h3>
 
-        <Form method="post" className={styles.formConnexion}>
-          <label htmlFor="username">Pseudonyme ou Mail</label>
+        <Form method="post" className={styles.formconnection}>
+          <label htmlFor="username">Pseudonyme ou Mail</label>{" "}
           <input
             placeholder="Zelda55"
             type="text"
@@ -24,7 +24,7 @@ export default function ConnexionPage() {
             name="username"
             aria-label="Entrer pseudoname ou mail"
           />
-          <label htmlFor="password">Mot de passe</label>
+          <label htmlFor="password">Mot de passe</label>{" "}
           <input
             type="password"
             id="password"
@@ -32,17 +32,19 @@ export default function ConnexionPage() {
             aria-label=" Entrer mot de passe"
           />
           <button
-            className={styles.buttonConnexion}
+            className={styles.buttonconnection}
             type="submit"
-            aria-label="Connexion"
+            aria-label="connection"
           >
-            Connexion
+            {" "}
+            connection
           </button>
           <button
             className={styles.buttonCreateProfil}
             type="submit"
             aria-label="Créer un profil"
           >
+            {" "}
             Créer un compte
           </button>
         </Form>

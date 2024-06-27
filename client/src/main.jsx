@@ -13,7 +13,7 @@ import MainPage from "./pages/MainPage/MainPage";
 import DetailPage from "./pages/DetailPage/DetailPage";
 import FormAdminGames from "./pages/FormAdminGames/FormAdminGames";
 import PrizePage from "./pages/PrizePage/PrizePage";
-import ConnexionPage from "./pages/ConnexionPage/ConnexionPage";
+import ConnectionPage from "./pages/ConnectionPage/ConnectionPage";
 import RegistrationPage from "./pages/RegistrationPage/RegistrationPage";
 
 const ApiUrl = import.meta.env.VITE_API_URL;
@@ -53,8 +53,8 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "/connexion",
-        element: <ConnexionPage />,
+        path: "/connection",
+        element: <ConnectionPage />,
       },
       {
         path: "/registration",
