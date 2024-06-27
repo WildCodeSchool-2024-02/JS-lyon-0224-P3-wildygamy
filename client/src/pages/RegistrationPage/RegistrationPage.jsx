@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import styles from "./RegistrationPage.module.css";
 
 export default function RegistrationPage({ handleSignUp }) {
+
   const [registerForm, setRegisterForm] = useState({
     username: "",
     lastname: "",
@@ -159,8 +160,8 @@ export default function RegistrationPage({ handleSignUp }) {
       const result = await handleSignUp({ formData });
 
       if (result.success) {
-        window.location.href = "/";
-      } else {
+        window.location.href = "/connection";
+      } else {  
         setError("form", result.error);
       }
     }
