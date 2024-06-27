@@ -11,7 +11,7 @@ class UserSeeder extends AbstractSeeder {
       const fakeUser = {
         email: this.faker.internet.email(),
         /* eslint-disable no-await-in-loop */
-        password: await argon2.hash(this.faker.internet.password()),
+        password: await argon2.hash("admin"),
         pseudo: this.faker.internet.displayName(),
         lastname: this.faker.person.lastName(),
         firstname: this.faker.person.firstName(),
