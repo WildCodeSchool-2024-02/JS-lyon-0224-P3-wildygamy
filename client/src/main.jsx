@@ -18,6 +18,31 @@ import RegistrationPage from "./pages/RegistrationPage/RegistrationPage";
 
 const ApiUrl = import.meta.env.VITE_API_URL;
 
+const handleSignUp = async ({ formData }) => {
+  try {
+    const response = await fetch(`${ApiUrl}/api/user/add`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.status === 401) {
+      alert("Le pseudo existe");
+    }
+
+    if (response.status !== 201) {
+      const errorData = await response.json();
+      return { error: errorData.message };
+    }
+
+    return { success: true };
+  } catch (error) {
+    return { error: error.message };
+  }
+};
+
 const router = createBrowserRouter([
   {
     element: <App />,
@@ -26,14 +51,14 @@ const router = createBrowserRouter([
         path: "/",
         element: <HomePage />,
       },
-      
+
       {
         path: "/connection",
         element: <ConnectionPage />,
       },
       {
         path: "/registration",
-        element: <RegistrationPage />,
+        element: <RegistrationPage handleSignUp={handleSignUp} />,
       },
       {
         path: "/games",
