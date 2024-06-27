@@ -10,3 +10,73 @@
   justify-content: center;
   align-items: center;
 }
+
+/* CARD */
+.cardRegistration {
+  background-color: var(--dark-color);
+  opacity: 0.9;
+  width: 67vw;
+  height: 92vh;
+  border: var(--light-color) solid 2px;
+  border-radius: 2.125rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.1rem 3rem 0 3rem;
+}
+
+.formRegistration {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 28vh;
+  gap: 1.2rem;
+}
+
+.formRegistration h3 {
+  color: var(--light-color);
+  font-size: 0.8rem;
+  padding: 4.5rem 0 0.6rem 0;
+}
+
+.formRegistration label {
+  font-family: var(--main-font-family);
+  color: var(--light-color);
+  font-size: 0.9rem;
+  padding-top: 0.8rem;
+}
+
+.formRegistration input {
+  background-color: transparent;
+  width: 60vw;
+  border: none;
+  border-bottom: solid var(--light-color) 0.08rem;
+  color: var(--light-color);
+  font-size: 1rem;
+  padding-top: 0;
+}
+
+/* BUTTON */
+.formRegistration button {
+  width: 60vw;
+  height: 5.7vh;
+  border: none;
+  border-radius: 1.1rem;
+  background-color: var(--main-color);
+  backdrop-filter: blur(1rem) var(--light-color);
+  box-shadow:
+    0 0 8px var(--main-color),
+    inset 0 0 8px var(--main-color),
+    0 0 16px var(--main-color),
+    inset 0 0 16px var(--main-color),
+    0 0 32px var(--main-color),
+    inset 0 0 32px var(--main-color);
+  margin-top: 0.8rem;
+}
+
+.formRegistration button:hover {
+  background-color: lightslategrey;
+  color: var(--light-color);
+  cursor: pointer;
+}
