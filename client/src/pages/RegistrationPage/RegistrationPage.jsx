@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
 import PropTypes from "prop-types"; 
+import styles from "./RegistrationPage.module.css";
 
 export default function RegistrationPage({ handleSignUp }) {
   const [registerForm, setRegisterForm] = useState({
@@ -166,7 +167,12 @@ export default function RegistrationPage({ handleSignUp }) {
   };
 
   return (
-    <Form method="post" onSubmit={handleSubmit}>
+    <div className={styles.backgroundRegistration}>
+      <div className={styles.cardRegistration}>
+    <Form method="post" onSubmit={handleSubmit} className={styles.formRegistration}> 
+    <h3>Créer votre profil</h3>
+
+
       <label htmlFor="username">Pseudonyme</label>
       <input
         placeholder="Zelda55"
@@ -250,6 +256,8 @@ export default function RegistrationPage({ handleSignUp }) {
         Valider
       </button>
     </Form>
+    </div>
+    </div>
   );
 }
 

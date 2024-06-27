@@ -5,6 +5,7 @@ import Logo from "../../assets/icones/logo.png";
 import styles from "./ConnectionPage.module.css";
 
 export default function ConnectionPage() {
+
   return (
     <div className={styles.backgroundconnectionPage}>
       <div className={styles.connectionCard}>

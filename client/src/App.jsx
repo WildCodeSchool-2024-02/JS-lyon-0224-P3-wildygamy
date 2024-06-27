@@ -7,7 +7,7 @@ function App() {
   // permet de cacher header & footer pour la page d'accueil seulement grâce au useLocation
   const location = useLocation();
   const hideHeaderFooter =
-    ["/", "/connection"].includes(location.pathname) === true;
+    ["/", "/connection","/registration"].includes(location.pathname) === true;
   return (
     // Si hideHeaderFooter est false affiche le Header/Footer
 
