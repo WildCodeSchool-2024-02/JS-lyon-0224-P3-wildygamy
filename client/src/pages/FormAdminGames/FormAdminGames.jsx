@@ -4,7 +4,7 @@ import styles from "./FormAdminGames.module.css";
 function FormAdminGames() {
   return (
     <div className={styles["form-container"]}>
-      <Form method="post">
+      <Form className={styles.formAdmin} method="post">
         <label htmlFor="GameName">Nom du jeu</label>
         <input type="text" id="GameName" name="GameName" />
 
@@ -12,12 +12,12 @@ function FormAdminGames() {
         <input type="text" id="CategoryName" name="CategoryName" />
 
         <div className={styles["checkbox-container"]}>
-          <label htmlFor="ChallengeName">is_challenge</label>
+          <label htmlFor="ChallengeName">Challenge</label>
           <input type="checkbox" id="ChallengeName" name="ChallengeName" />
         </div>
 
         <div className={styles["checkbox-container"]}>
-          <label htmlFor="PopularName">is_popular</label>
+          <label htmlFor="PopularName">Populaire</label>
           <input type="checkbox" id="PopularName" name="PopularName" />
         </div>
 

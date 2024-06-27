@@ -1,5 +1,5 @@
 .containerDetail {
-  height: 80vh;
+  max-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;

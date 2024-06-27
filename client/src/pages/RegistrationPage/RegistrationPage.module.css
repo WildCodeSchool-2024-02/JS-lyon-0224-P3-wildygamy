@@ -1,4 +1,4 @@
-.backgroundConnexionPage {
+.backgroundRegistration {
   background-image: url("../../assets/images/background_purple.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -12,9 +12,9 @@
 }
 
 /* CARD */
-.connexionCard {
+.cardRegistration {
   background-color: var(--dark-color);
-  opacity: 0.8;
+  opacity: 0.9;
   width: 67vw;
   height: 92vh;
   border: var(--light-color) solid 2px;
@@ -26,88 +26,56 @@
   padding: 0.1rem 3rem 0 3rem;
 }
 
-.logoConnexion {
-  width: 20vw;
-  height: auto;
-  padding: 0.7rem 0 0.8rem 0;
-}
-
-/* titre connexion */
-.connexionCard > h3 {
-  color: var(--third-color);
-  font-size: 1em;
-  padding: 0.8rem 0 2rem 0;
-  margin: 0;
-}
-
-.formConnexion ::placeholder {
-  font-style: italic;
-}
-
-.connexionCard h4 {
-  color: var(--light-color);
-  font-size: 0.9rem;
-  text-decoration: underline;
-  font-weight: 30;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  padding: 1.9rem 0 0 0;
-}
-
-.formConnexion {
+.formRegistration {
   display: flex;
   flex-direction: column;
-  background: none;
   align-content: center;
-  padding: 0;
   width: 28vh;
   gap: 1.2rem;
 }
 
-.formConnexion label {
+.formRegistration h3 {
   color: var(--light-color);
-  font-family: var(--main-font-family);
-  font-size: 0.9rem;
-  padding-top: 1rem;
+  font-size: 0.8rem;
+  padding: 4.5rem 0 0.6rem 0;
 }
 
-.formConnexion input {
-  background-color: transparent;
-  width: 59vw;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: solid var(--light-color) 0.08rem;
+.formRegistration label {
+  font-family: var(--main-font-family);
+  color: var(--light-color);
+  font-size: 0.9rem;
+  padding-top: 0.8rem;
 }
-.buttonConnexion {
+
+.formRegistration input {
+  background-color: transparent;
+  width: 60vw;
+  border: none;
+  border-bottom: solid var(--light-color) 0.08rem;
+  color: var(--light-color);
+  font-size: 1rem;
+  padding-top: 0;
+}
+
+/* BUTTON */
+.formRegistration button {
   width: 60vw;
   height: 5.7vh;
   border: none;
   border-radius: 1.1rem;
-  color: var(--light-color);
   background-color: var(--main-color);
+  backdrop-filter: blur(1rem) var(--light-color);
   box-shadow:
-    0 0 8px #fff,
-    inset 0 0 8px #fff,
+    0 0 8px var(--main-color),
+    inset 0 0 8px var(--main-color),
     0 0 16px var(--main-color),
     inset 0 0 16px var(--main-color),
     0 0 32px var(--main-color),
     inset 0 0 32px var(--main-color);
-  margin-top: 3rem;
+  margin-top: 0.8rem;
 }
 
-.buttonCreateProfil {
-  width: 60vw;
-  height: 5.7vh;
-  background-color: var(--light-color);
-  border: none;
-  border-radius: 1.1rem;
-  color: var(--dark-color);
-  margin-top: 1rem;
-  margin-bottom: 3rem;
-}
-
-.buttonCreateProfil:hover,
-.buttonConnexion:hover {
+.formRegistration button:hover {
   background-color: lightslategrey;
   color: var(--light-color);
   cursor: pointer;
