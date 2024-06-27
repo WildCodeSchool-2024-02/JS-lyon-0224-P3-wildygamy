@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
-import PropTypes from "prop-types"; 
+import { toast } from "react-toastify";
+import PropTypes from "prop-types";
 
 export default function RegistrationPage({ handleSignUp }) {
+  const notifySucess = (text) => toast.success(text);
+
   const [registerForm, setRegisterForm] = useState({
     username: "",
     lastname: "",
@@ -158,7 +161,17 @@ export default function RegistrationPage({ handleSignUp }) {
       const result = await handleSignUp({ formData });
 
       if (result.success) {
-        window.location.href = "/";
+        notifySucess("Votre compte a été crée", {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+        window.location.href = "/connection";
       } else {
         setError("form", result.error);
       }
