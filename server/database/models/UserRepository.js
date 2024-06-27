@@ -47,13 +47,13 @@ class UserRepository extends AbstractRepository {
     if (rows.length === 0) {
       validPseudo = false;
     }
-    return validPseudo    
+    return validPseudo;
   }
 
-  async readByEmailWithPassword(email) {
+  async readByPseudoWithPassword(pseudo) {
     const [rows] = await this.database.query(
-      `select * from ${this.table} where email = ?`,
-      [email]
+      `select * from ${this.table} where pseudo = ?`,
+      [pseudo]
     );
 
     return rows[0];

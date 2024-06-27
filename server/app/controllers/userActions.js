@@ -5,23 +5,34 @@ const browse = async (req, res) => {
 
   res.json(userfromDB);
 };
-
-const add = async (req, res, next) => {
-  const item = req.body;
-  const pseudoExist = await tables.user.isPseudoExist(item.username)
-
+const read = async (req, res, next) => {
   try {
-    if(pseudoExist===false){
-      const insertId = await tables.user.create(item);
-      res.status(201).json({ insertId });
+    const user = await tables.user.read(req.params.id);
+
+    if (user === null) {
+      res.sendStatus(404);
+    } else {
+      res.json(user);
     }
-    else{
-      res.sendStatus(401)
-    }
-  }
-   catch (err) {
+  } catch (err) {
     next(err);
   }
 };
 
-module.exports = { browse, add };
+const add = async (req, res, next) => {
+  const item = req.body;
+  const pseudoExist = await tables.user.isPseudoExist(item.username);
+
+  try {
+    if (pseudoExist === false) {
+      const insertId = await tables.user.create(item);
+      res.status(201).json({ insertId });
+    } else {
+      res.sendStatus(401);
+    }
+  } catch (err) {
+    next(err);
+  }
+};
+
+module.exports = { browse, add, read };
