@@ -28,8 +28,8 @@ const handleSignUp = async ({ formData }) => {
       body: JSON.stringify(formData),
     });
 
-    if(response.status === 401){
-      alert("Le pseudo existe")
+    if (response.status === 401) {
+      alert("Le pseudo existe");
     }
 
     if (response.status !== 201) {
@@ -51,14 +51,14 @@ const router = createBrowserRouter([
         path: "/",
         element: <HomePage />,
       },
-      
+
       {
         path: "/connexion",
         element: <ConnexionPage />,
       },
       {
         path: "/registration",
-        element: <RegistrationPage handleSignUp={handleSignUp}/>,
+        element: <RegistrationPage handleSignUp={handleSignUp} />,
       },
       {
         path: "/games",

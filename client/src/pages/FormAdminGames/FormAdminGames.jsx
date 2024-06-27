@@ -4,7 +4,7 @@ import styles from "./FormAdminGames.module.css";
 function FormAdminGames() {
   return (
     <div className={styles["form-container"]}>
-      <Form  className={styles.formAdmin} method="post">
+      <Form className={styles.formAdmin} method="post">
         <label htmlFor="GameName">Nom du jeu</label>
         <input type="text" id="GameName" name="GameName" />
 

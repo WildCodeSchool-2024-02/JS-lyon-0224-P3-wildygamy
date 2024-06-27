@@ -46,7 +46,7 @@ class GameRepository extends AbstractRepository {
         gameChallenge,
         gamePopular,
         game.imageName,
-        game.synopsisName
+        game.synopsisName,
       ]
     );
     return result.insertId;
