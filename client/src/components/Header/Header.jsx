@@ -16,13 +16,13 @@ export default function Header() {
           </Link>
         </li>
         <li className={styles.list_nosjeux}>
-          <Link className={styles.link} to="/games">
+          <Link className={styles.link} to="/allgames">
             Nos jeux
           </Link>
         </li>
       </ul>
       <Link className={styles.link} to="/admin/games">
-      <img src={profil} alt="" className={styles.profil} />
+        <img src={profil} alt="" className={styles.profil} />
       </Link>
     </div>
   );
