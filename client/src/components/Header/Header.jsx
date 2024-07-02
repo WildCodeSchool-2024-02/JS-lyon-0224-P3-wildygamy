@@ -6,8 +6,8 @@ import styles from "./Header.module.css";
 export default function Header() {
   return (
     <div className={styles.containerheader}>
-      <Link className={styles.link} to="/">
-        <img src={logo} alt="" className={styles.logo} />
+      <Link className={styles.link} to="/games">
+      <img src={logo} alt="" className={styles.logo} />
       </Link>
       <ul className={styles.list}>
         <li className={styles.list_lots}>
