@@ -1,4 +1,4 @@
-import { Form } from "react-router-dom";
+import { Form , Link } from "react-router-dom";
 import { useState } from "react";
 import Logo from "../../assets/icones/logo.png";
 import styles from "./ConnectionPage.module.css";
@@ -37,11 +37,13 @@ export default function ConnectionPage() {
   return (
     <div className={styles.backgroundconnectionPage}>
       <div className={styles.connectionCard}>
+      <Link to="/">
         <img
           className={styles.logoconnection}
           src={Logo}
           alt="logo wildy gamy"
         />
+      </Link>
         <h3>Connexion</h3>
         <Form method="post" className={styles.formconnection}>
           <label htmlFor="username">Pseudonyme</label>
@@ -71,6 +73,7 @@ export default function ConnectionPage() {
           >
             Connexion
           </button>
+          <Link to="/registration">
           <button
             className={styles.buttonCreateProfil}
             type="button"
@@ -78,6 +81,7 @@ export default function ConnectionPage() {
           >
             Créer un compte
           </button>
+          </Link>
         </Form>
         <h4>Mot de passe oublié</h4>
       </div>
