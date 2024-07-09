@@ -51,6 +51,22 @@ class GameRepository extends AbstractRepository {
     );
     return result.insertId;
   }
+
+  async update(news) {
+    const [result] = await this.database.query(
+      `update ${this.table} SET title = ?, intro = ?, content = ?, date = ? where id = ?`,
+      [news.title, news.intro, news.content, news.date, news.id]
+    );
+    return result;
+  }
+
+  async delete(id) {
+    const [result] = await this.database.query(
+      `delete from ${this.table} where id = ?`,
+      [id]
+    );
+    return result;
+  }
 }
 
 module.exports = GameRepository;
