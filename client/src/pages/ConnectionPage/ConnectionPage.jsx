@@ -21,7 +21,6 @@ export default function ConnectionPage({ handleLogin }) {
 
   };
 
-
   const setError = (name, message) => {
     setFormErrors((previousErrors) => ({
       ...previousErrors,

@@ -54,7 +54,7 @@ const handleLogin  = async ({ formData }) => {
     });
 
     if (response.status === 401) {
-      alert("Le pseudo existe");
+      alert("Le psuedo existe");
     }
 
     if (response.status !== 201) {
