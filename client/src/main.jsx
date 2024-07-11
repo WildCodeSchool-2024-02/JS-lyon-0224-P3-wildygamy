@@ -43,8 +43,6 @@ const handleSignUp = async ({ formData }) => {
   }
 };
 
-
-
 const router = createBrowserRouter([
   {
     element: <App />,
@@ -56,11 +54,11 @@ const router = createBrowserRouter([
 
       {
         path: "/connection",
-        element: <ConnectionPage/>,
+        element: <ConnectionPage />,
       },
       {
         path: "/registration",
-        element: <RegistrationPage handleSignUp={handleSignUp}/>,
+        element: <RegistrationPage handleSignUp={handleSignUp} />,
       },
       {
         path: "/games",

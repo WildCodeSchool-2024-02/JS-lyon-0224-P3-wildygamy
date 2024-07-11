@@ -5,13 +5,13 @@ const tables = require("../../database/tables");
 
 const login = async (req, res, next) => {
   try {
-    const user = await tables.user.readByPseudoWithPassword(req.body.username);
+    const user = await tables.user.readByPseudoWithPassword(req.body.formData.username);
     if (user == null) {
       res.sendStatus(422);
       return;
     }
 
-    const verified = await argon2.verify(user.password, req.body.password);
+    const verified = await argon2.verify(user.password, req.body.formData.password);
 
     if (verified === true) {
       delete user.hashed_password;
