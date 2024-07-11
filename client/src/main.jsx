@@ -15,7 +15,7 @@ import PrizePage from "./pages/PrizePage/PrizePage";
 import ConnectionPage from "./pages/ConnectionPage/ConnectionPage";
 import RegistrationPage from "./pages/RegistrationPage/RegistrationPage";
 import GamePage from "./pages/GamePage/GamePage";
-import ContactPage from "./pages/ContactPage/ContactPage"; // Importez votre nouvelle page de contact
+import ContactPage from "./pages/ContactPage/ContactPage";
 
 const ApiUrl = import.meta.env.VITE_API_URL;
 const notifyFail = (text) => toast.error(text);
