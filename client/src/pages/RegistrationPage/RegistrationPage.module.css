@@ -11,7 +11,6 @@
   align-items: center;
 }
 
-/* CARD */
 .cardRegistration {
   background-color: var(--dark-color);
   opacity: 0.9;
@@ -26,6 +25,12 @@
   padding: 0.1rem 3rem 0 3rem;
 }
 
+.logoconnection {
+  width: 80px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .formRegistration {
   display: flex;
   flex-direction: column;
@@ -37,7 +42,7 @@
 .formRegistration h3 {
   color: var(--light-color);
   font-size: 0.8rem;
-  padding: 4.5rem 0 0.6rem 0;
+  padding: 1.5rem 0 0.6rem 0;
 }
 
 .formRegistration label {
@@ -57,7 +62,6 @@
   padding-top: 0;
 }
 
-/* BUTTON */
 .formRegistration button {
   width: 60vw;
   height: 5.7vh;

@@ -64,7 +64,7 @@
 }
 
 .formconnection label {
-  color: var(--light-color);
+  color: var(--main-color);
   font-family: var(--main-font-family);
   font-size: 0.9rem;
   padding-top: 1rem;
@@ -72,10 +72,12 @@
 
 .formconnection input {
   background-color: transparent;
+  color: var(--light-color);
   width: 59vw;
   border-top: 0;
   border-left: 0;
   border-right: 0;
+  padding-left: 0.5rem;
   border-bottom: solid var(--light-color) 0.08rem;
 }
 .buttonconnection {
