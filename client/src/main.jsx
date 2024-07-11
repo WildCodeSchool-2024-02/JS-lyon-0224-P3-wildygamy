@@ -43,30 +43,7 @@ const handleSignUp = async ({ formData }) => {
   }
 };
 
-const handleLogin  = async ({ formData }) => {
-  try {
-    const response = await fetch(`${ApiUrl}/api/user/add`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
 
-    if (response.status === 401) {
-      alert("Le psuedo existe");
-    }
-
-    if (response.status !== 201) {
-      const errorData = await response.json();
-      return { error: errorData.message };
-    }
-
-    return { success: true };
-  } catch (error) {
-    return { error: error.message };
-  }
-};
 
 const router = createBrowserRouter([
   {
@@ -79,7 +56,7 @@ const router = createBrowserRouter([
 
       {
         path: "/connection",
-        element: <ConnectionPage handleLogin={handleLogin}/>,
+        element: <ConnectionPage/>,
       },
       {
         path: "/registration",

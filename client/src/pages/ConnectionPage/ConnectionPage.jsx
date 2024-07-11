@@ -1,11 +1,11 @@
-import { Form } from "react-router-dom";
+import { Form , Link } from "react-router-dom";
 import { useState } from "react";
-import PropTypes from "prop-types"; 
 import Logo from "../../assets/icones/logo.png";
 import styles from "./ConnectionPage.module.css";
 
 
-export default function ConnectionPage({ handleLogin }) {
+export default function ConnectionPage() {
+  const ApiUrl = import.meta.env.VITE_API_URL;
   const[connectionForm, setConnectionForm] = useState({
     username: "",
     password: ""
@@ -103,7 +103,24 @@ export default function ConnectionPage({ handleLogin }) {
 return allValid;
   };
 
+  const handleLogin = async (e) => {
+    e.preventDefault();
 
+    try {
+      const response = await fetch(`${ApiUrl}/api/user/login`, {
+        method: "post",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(connectionForm),
+      });
+
+      if (response.status === 200) {
+        const user = await response.json();
+        console.info(user);
+      }
+    } catch (error) {
+      console.error("Error during login:", error);
+    }
+  };
 
 const handleSubmit = async (e) => {
   e.preventDefault();
@@ -127,18 +144,27 @@ const handleSubmit = async (e) => {
 };
 
 
+
+
+
+
+
+
+
+
   return (
     <div className={styles.backgroundconnectionPage}>
       <div className={styles.connectionCard}>
+      <Link to="/">
         <img
           className={styles.logoconnection}
           src={Logo}
           alt="logo wildy gamy"
         />
-        <h3>connection</h3>
-
+      </Link>
+        <h3>Connexion</h3>
         <Form method="post" className={styles.formconnection}>
-          <label htmlFor="username">Pseudonyme ou Mail</label>{" "}
+          <label htmlFor="username">Pseudonyme</label>
           <input
             placeholder="Zelda55"
             type="text"
@@ -175,14 +201,16 @@ const handleSubmit = async (e) => {
         
             connection
           </button>
+          <Link to="/registration">
           <button
             className={styles.buttonCreateProfil}
-            type="submit"
+            type="button"
             aria-label="Créer un profil"
           >
            
             Créer un compte
           </button>
+          </Link>
         </Form>
         <h4>Mot de passe oublié</h4>
       </div>
@@ -190,6 +218,3 @@ const handleSubmit = async (e) => {
   );
 }
 
-ConnectionPage.propTypes = {
-  handleLogin: PropTypes.func.isRequired,
-};
