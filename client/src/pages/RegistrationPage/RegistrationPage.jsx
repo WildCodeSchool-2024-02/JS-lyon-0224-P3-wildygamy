@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
-import PropTypes from "prop-types"; 
+import PropTypes from "prop-types";
 import styles from "./RegistrationPage.module.css";
 
 export default function RegistrationPage({ handleSignUp }) {
-
   const [registerForm, setRegisterForm] = useState({
     username: "",
     lastname: "",
@@ -161,7 +160,7 @@ export default function RegistrationPage({ handleSignUp }) {
 
       if (result.success) {
         window.location.href = "/connection";
-      } else {  
+      } else {
         setError("form", result.error);
       }
     }
@@ -170,94 +169,99 @@ export default function RegistrationPage({ handleSignUp }) {
   return (
     <div className={styles.backgroundRegistration}>
       <div className={styles.cardRegistration}>
-    <Form method="post" onSubmit={handleSubmit} className={styles.formRegistration}> 
-    <h3>Créer votre profil</h3>
+        <Form
+          method="post"
+          onSubmit={handleSubmit}
+          className={styles.formRegistration}
+        >
+          <h3>Créer votre profil</h3>
 
-
-      <label htmlFor="username">Pseudonyme</label>
-      <input
-        placeholder="Zelda55"
-        type="text"
-        id="username"
-        name="username"
-        aria-label="Entrer un pseudonyme"
-        value={registerForm.username}
-        onChange={handleChange}
-        required
-      />
-      {formErrors.username !== "" && (
-        <div className="error">{formErrors.username}</div>
-      )}
-      <label htmlFor="lastname">NOM</label>
-      <input
-        type="text"
-        id="lastname"
-        name="lastname"
-        value={registerForm.lastname}
-        onChange={handleChange}
-        required
-        aria-label=" Entrer votre nom de famille en lettres majuscule"
-      />
-      {formErrors.lastname !== "" && (
-        <div className="error">{formErrors.lastname}</div>
-      )}
-      <label htmlFor="firstname">Prénom</label>
-      <input
-        type="text"
-        id="firstname"
-        name="firstname"
-        value={registerForm.firstname}
-        onChange={handleChange}
-        aria-label=" Entrer votre prénom en commençant par une lettre majuscule"
-        required
-      />
-      {formErrors.firstname !== "" && (
-        <div className="error">{formErrors.firstname}</div>
-      )}
-      <label htmlFor="mail">Mail</label>
-      <input
-        type="mail"
-        id="mail"
-        name="mail"
-        value={registerForm.mail}
-        onChange={handleChange}
-        aria-label=" Entrer votre adresse e-mail"
-        required
-      />
-      {formErrors.mail !== "" && <div className="error">{formErrors.mail}</div>}
-      <label htmlFor="password">Mot de passe</label>
-      <input
-        type="password"
-        id="password"
-        name="password"
-        value={registerForm.password}
-        onChange={handleChange}
-        aria-label=" Entrer un mot de passe"
-      />
-      {formErrors.password !== "" && (
-        <div className="error">{formErrors.password}</div>
-      )}
-      <label htmlFor="password2">Confirmer votre mot de passe</label>
-      <input
-        type="password"
-        id="password2"
-        name="password2"
-        value={registerForm.password2}
-        onChange={handleChange}
-        aria-label=" Entrer un mot de passe"
-      />
-      {formErrors.password2 !== "" && (
-        <div className="error">{formErrors.password2}</div>
-      )}
-      <button
-        type="submit"
-        aria-label="Valider votre compte"
-        onSubmit={handleSubmit}
-      >
-        Valider
-      </button>
-    </Form>
-    </div>
+          <label htmlFor="username">Pseudonyme</label>
+          <input
+            placeholder="Zelda55"
+            type="text"
+            id="username"
+            name="username"
+            aria-label="Entrer un pseudonyme"
+            value={registerForm.username}
+            onChange={handleChange}
+            required
+          />
+          {formErrors.username !== "" && (
+            <div className="error">{formErrors.username}</div>
+          )}
+          <label htmlFor="lastname">NOM</label>
+          <input
+            type="text"
+            id="lastname"
+            name="lastname"
+            value={registerForm.lastname}
+            onChange={handleChange}
+            required
+            aria-label=" Entrer votre nom de famille en lettres majuscule"
+          />
+          {formErrors.lastname !== "" && (
+            <div className="error">{formErrors.lastname}</div>
+          )}
+          <label htmlFor="firstname">Prénom</label>
+          <input
+            type="text"
+            id="firstname"
+            name="firstname"
+            value={registerForm.firstname}
+            onChange={handleChange}
+            aria-label=" Entrer votre prénom en commençant par une lettre majuscule"
+            required
+          />
+          {formErrors.firstname !== "" && (
+            <div className="error">{formErrors.firstname}</div>
+          )}
+          <label htmlFor="mail">Mail</label>
+          <input
+            type="mail"
+            id="mail"
+            name="mail"
+            value={registerForm.mail}
+            onChange={handleChange}
+            aria-label=" Entrer votre adresse e-mail"
+            required
+          />
+          {formErrors.mail !== "" && (
+            <div className="error">{formErrors.mail}</div>
+          )}
+          <label htmlFor="password">Mot de passe</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            value={registerForm.password}
+            onChange={handleChange}
+            aria-label=" Entrer un mot de passe"
+          />
+          {formErrors.password !== "" && (
+            <div className="error">{formErrors.password}</div>
+          )}
+          <label htmlFor="password2">Confirmer votre mot de passe</label>
+          <input
+            type="password"
+            id="password2"
+            name="password2"
+            value={registerForm.password2}
+            onChange={handleChange}
+            aria-label=" Entrer un mot de passe"
+          />
+          {formErrors.password2 !== "" && (
+            <div className="error">{formErrors.password2}</div>
+          )}
+          <button
+            type="submit"
+            aria-label="Valider votre compte"
+            onSubmit={handleSubmit}
+          >
+            Valider
+          </button>
+        </Form>
+      </div>
     </div>
   );
 }

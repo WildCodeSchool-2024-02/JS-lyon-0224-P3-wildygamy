@@ -5,7 +5,7 @@ import {
   RouterProvider,
   redirect,
 } from "react-router-dom";
-import { toast } from "react-toastify";
+
 import App from "./App";
 import HomePage from "./pages/HomePage/HomePage";
 
@@ -15,10 +15,8 @@ import FormAdminGames from "./pages/FormAdminGames/FormAdminGames";
 import PrizePage from "./pages/PrizePage/PrizePage";
 import ConnectionPage from "./pages/ConnectionPage/ConnectionPage";
 import RegistrationPage from "./pages/RegistrationPage/RegistrationPage";
-import GamePage from "./pages/GamePage/GamePage";
 
 const ApiUrl = import.meta.env.VITE_API_URL;
-const notifyFail = (text) => toast.error(text);
 
 const handleSignUp = async ({ formData }) => {
   try {
@@ -31,16 +29,7 @@ const handleSignUp = async ({ formData }) => {
     });
 
     if (response.status === 401) {
-      notifyFail("Le pseudo existe déjà", {
-        position: "bottom-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-      });
+      alert("Le pseudo existe");
     }
 
     if (response.status !== 201) {
@@ -74,11 +63,6 @@ const router = createBrowserRouter([
       {
         path: "/games",
         element: <MainPage />,
-        loader: async () => fetch(`${ApiUrl}/api/games`),
-      },
-      {
-        path: "/allgames",
-        element: <GamePage />,
         loader: async () => fetch(`${ApiUrl}/api/games`),
       },
       {
