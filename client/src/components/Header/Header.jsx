@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <div className={styles.containerheader}>
       <Link className={styles.link} to="/games">
-      <img src={logo} alt="" className={styles.logo} />
+        <img src={logo} alt="Logo" className={styles.logo} />
       </Link>
       <ul className={styles.list}>
         <li className={styles.list_lots}>
@@ -20,9 +20,14 @@ export default function Header() {
             Nos jeux
           </Link>
         </li>
+        <li className={styles.list_contact}>
+          <Link className={styles.link} to="/contact">
+            Contact
+          </Link>
+        </li>
       </ul>
       <Link className={styles.link} to="/admin/games">
-        <img src={profil} alt="" className={styles.profil} />
+        <img src={profil} alt="Profil" className={styles.profil} />
       </Link>
     </div>
   );

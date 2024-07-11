@@ -8,13 +8,14 @@ import {
 
 import App from "./App";
 import HomePage from "./pages/HomePage/HomePage";
-
 import MainPage from "./pages/MainPage/MainPage";
 import DetailPage from "./pages/DetailPage/DetailPage";
 import FormAdminGames from "./pages/FormAdminGames/FormAdminGames";
 import PrizePage from "./pages/PrizePage/PrizePage";
 import ConnectionPage from "./pages/ConnectionPage/ConnectionPage";
 import RegistrationPage from "./pages/RegistrationPage/RegistrationPage";
+import GamePage from "./pages/GamePage/GamePage";
+import ContactPage from "./pages/ContactPage/ContactPage";
 
 const ApiUrl = import.meta.env.VITE_API_URL;
 
@@ -51,7 +52,6 @@ const router = createBrowserRouter([
         path: "/",
         element: <HomePage />,
       },
-
       {
         path: "/connection",
         element: <ConnectionPage />,
@@ -70,7 +70,6 @@ const router = createBrowserRouter([
         element: <DetailPage />,
         loader: async () => fetch(`${ApiUrl}/api/games`),
       },
-
       {
         path: "admin/games",
         element: <FormAdminGames />,
@@ -108,6 +107,10 @@ const router = createBrowserRouter([
         path: "/prizes",
         element: <PrizePage />,
         loader: async () => fetch(`${import.meta.env.VITE_API_URL}/api/prizes`),
+      },
+      {
+        path: "/contact",
+        element: <ContactPage />,
       },
     ],
   },
