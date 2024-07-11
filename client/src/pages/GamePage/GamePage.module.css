@@ -23,3 +23,11 @@
   color: var(--light-color);
   font-size: 0.6rem;
 }
+
+button {
+  color: black;
+}
+
+.buttonAdd {
+  background-color: green;
+}

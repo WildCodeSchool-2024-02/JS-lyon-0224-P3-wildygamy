@@ -3,12 +3,10 @@ import ReactDOM from "react-dom/client";
 import {
   createBrowserRouter,
   RouterProvider,
-  redirect,
 } from "react-router-dom";
-import { toast } from "react-toastify";
+
 import App from "./App";
 import HomePage from "./pages/HomePage/HomePage";
-
 import MainPage from "./pages/MainPage/MainPage";
 import DetailPage from "./pages/DetailPage/DetailPage";
 import FormAdminGames from "./pages/FormAdminGames/FormAdminGames";
@@ -16,9 +14,9 @@ import PrizePage from "./pages/PrizePage/PrizePage";
 import ConnectionPage from "./pages/ConnectionPage/ConnectionPage";
 import RegistrationPage from "./pages/RegistrationPage/RegistrationPage";
 import GamePage from "./pages/GamePage/GamePage";
+import ContactPage from "./pages/ContactPage/ContactPage";
 
 const ApiUrl = import.meta.env.VITE_API_URL;
-const notifyFail = (text) => toast.error(text);
 
 const handleSignUp = async ({ formData }) => {
   try {
@@ -31,16 +29,7 @@ const handleSignUp = async ({ formData }) => {
     });
 
     if (response.status === 401) {
-      notifyFail("Le pseudo existe déjà", {
-        position: "bottom-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-      });
+      alert("Le pseudo existe");
     }
 
     if (response.status !== 201) {
@@ -62,7 +51,6 @@ const router = createBrowserRouter([
         path: "/",
         element: <HomePage />,
       },
-
       {
         path: "/connection",
         element: <ConnectionPage />,
@@ -79,51 +67,28 @@ const router = createBrowserRouter([
       {
         path: "/allgames",
         element: <GamePage />,
-        loader: async () => fetch(`${ApiUrl}/api/games`),
       },
       {
         path: "games/:id",
         element: <DetailPage />,
         loader: async () => fetch(`${ApiUrl}/api/games`),
       },
-
       {
-        path: "admin/games",
+        path: "admin/games/add",
         element: <FormAdminGames />,
-        action: async ({ request }) => {
-          const formData = await request.formData();
-
-          const gameName = formData.get("GameName");
-          const categoryName = formData.get("CategoryName");
-          const challengeName = formData.get("ChallengeName");
-          const popularName = formData.get("PopularName");
-          const imageName = formData.get("ImageName");
-          const synopsisName = formData.get("SynopsisName");
-
-          const game = {
-            gameName,
-            categoryName,
-            challengeName,
-            popularName,
-            imageName,
-            synopsisName,
-          };
-
-          let response = await fetch(`${ApiUrl}/api/games/add`, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(game),
-          });
-          response = await response.json();
-          return redirect(`/games/${response.insertId}`);
-        },
+      },
+      {
+        path: "admin/games/edit/:id",
+        element: <FormAdminGames />,
       },
       {
         path: "/prizes",
         element: <PrizePage />,
         loader: async () => fetch(`${import.meta.env.VITE_API_URL}/api/prizes`),
+      },
+      {
+        path: "/contact",
+        element: <ContactPage />,
       },
     ],
   },
