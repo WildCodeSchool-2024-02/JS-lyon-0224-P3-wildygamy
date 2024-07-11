@@ -21,7 +21,7 @@ export default function Header() {
           </Link>
         </li>
       </ul>
-      <Link className={styles.link} to="/admin/games">
+      <Link className={styles.link} to="/admin/games/add">
         <img src={profil} alt="" className={styles.profil} />
       </Link>
     </div>

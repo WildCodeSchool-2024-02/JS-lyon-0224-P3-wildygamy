@@ -31,31 +31,40 @@ class GameRepository extends AbstractRepository {
   async create(game) {
     let gameChallenge = false;
     let gamePopular = false;
-    if (game.challengeName === "on") {
+    if (game.challenge === "on") {
       gameChallenge = true;
     }
-    if (game.popularName === "on") {
+    if (game.popular === "on") {
       gamePopular = true;
     }
 
     const [result] = await this.database.query(
       `insert into ${this.table} (name, category, is_challenge, is_popular, image, synopsis) values (?, ?, ?, ?, ?, ?)`,
       [
-        game.gameName,
-        game.categoryName,
+        game.name,
+        game.category,
         gameChallenge,
         gamePopular,
-        game.imageName,
-        game.synopsisName,
+        game.image,
+        game.synopsis,
       ]
     );
     return result.insertId;
   }
 
-  async update(news) {
+  async update(game) {
+    let gameChallenge = false;
+    let gamePopular = false;
+    if (game.challenge === "on") {
+      gameChallenge = true;
+    }
+    if (game.popular === "on") {
+      gamePopular = true;
+    }
+    const gameId = parseInt(game.id,10)
     const [result] = await this.database.query(
-      `update ${this.table} SET title = ?, intro = ?, content = ?, date = ? where id = ?`,
-      [news.title, news.intro, news.content, news.date, news.id]
+      `UPDATE ${this.table} SET name = ?, category = ?, is_challenge = ?, is_popular = ?, image = ?, synopsis = ? WHERE id = ?`,
+      [game.name, game.category, gameChallenge, gamePopular, game.image, game.synopsis, gameId]
     );
     return result;
   }

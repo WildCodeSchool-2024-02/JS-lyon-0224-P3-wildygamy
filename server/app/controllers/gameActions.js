@@ -33,9 +33,9 @@ const edit = async (req, res, next) => {
   const news = req.body;
   try {
     // Update the item into the database
-    const updatedNews = await tables.news.update(news);
+    const updatedGame = await tables.game.update(news);
     // Respond with HTTP 201 (OK) and the response data
-    res.status(200).json({ updatedNews });
+    res.status(200).json({ updatedGame });
   } catch (err) {
     // Pass any errors to the error-handling middleware
     next(err);
@@ -47,9 +47,9 @@ const destroy = async (req, res, next) => {
   const { id } = req.body;
   try {
     // Delete the news from the database
-    const deletedNews = await tables.news.delete(id);
+    const deletedGame = await tables.game.delete(id);
     // Respond with HTTP 200 (OK) and the response data
-    res.status(200).json({ deletedNews });
+    res.status(200).json({ deletedGame });
   } catch (err) {
     // Pass any errors to the error-handling middleware
     next(err);
