@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Form } from "react-router-dom";
+import { Form, Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import Logo from "../../assets/icones/logo.png";
 import styles from "./RegistrationPage.module.css";
 
 export default function RegistrationPage({ handleSignUp }) {
@@ -169,13 +170,19 @@ export default function RegistrationPage({ handleSignUp }) {
   return (
     <div className={styles.backgroundRegistration}>
       <div className={styles.cardRegistration}>
+        <Link to="/">
+          <img
+            className={styles.logoconnection}
+            src={Logo}
+            alt="logo wildy gamy"
+          />
+        </Link>
+        <h3>Créer votre profil</h3>
         <Form
           method="post"
           onSubmit={handleSubmit}
           className={styles.formRegistration}
         >
-          <h3>Créer votre profil</h3>
-
           <label htmlFor="username">Pseudonyme</label>
           <input
             placeholder="Zelda55"
