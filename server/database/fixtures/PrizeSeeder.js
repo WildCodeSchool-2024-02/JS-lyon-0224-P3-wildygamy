@@ -55,7 +55,7 @@ class PrizeSeeder extends AbstractSeeder {
       },
       {
         name: "Pass journée Wildy-Gamy",
-        image: "passe-une-journee.jpg",
+        image: "/images_lots/passe-une-journée",
         points: "2500",
       },
       {
