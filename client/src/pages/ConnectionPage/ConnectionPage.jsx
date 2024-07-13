@@ -92,6 +92,7 @@ export default function ConnectionPage() {
         method: "post",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(dataForm),
+        credentials:"include",
       });
 
       if (response.status === 200) {
