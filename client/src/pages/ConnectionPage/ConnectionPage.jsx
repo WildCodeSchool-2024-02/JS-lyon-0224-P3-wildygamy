@@ -93,8 +93,6 @@ export default function ConnectionPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(dataForm),
         credentials:"include",
-        
-
       });
 
       if (response.status === 200) {
