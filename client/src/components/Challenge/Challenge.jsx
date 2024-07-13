@@ -5,7 +5,7 @@ import Play from "../../assets/icones/play.png";
 import Styles from "./Challenge.module.css";
 
 export default function Challenge({ game }) {
-  const [playing, setPlaying] = useState(true);
+  const [playing, setPlaying] = useState(false);
 
   const restartGame = () => {
     setPlaying(!playing);
