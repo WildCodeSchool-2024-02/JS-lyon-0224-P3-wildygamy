@@ -18,6 +18,7 @@ function FormAdminGames() {
     synopsis: "",
     id,
   });
+
   useEffect(() => {
     if (editMode === true) {
       fetch(`${ApiUrl}/api/games/${id}`)
@@ -50,6 +51,7 @@ function FormAdminGames() {
           headers: {
             "Content-Type": "application/json",
           },
+          credentials: "include",
           body: JSON.stringify(gameForm),
         }
       );
@@ -127,10 +129,11 @@ function FormAdminGames() {
         />
 
         <button type="submit" onClick={handleSubmit}>
-          {editMode === false ? "Ajouter" : "Edit"}
+          {editMode === false ? "Ajouter" : "Modifier"}
         </button>
       </form>
     </div>
   );
 }
+
 export default FormAdminGames;

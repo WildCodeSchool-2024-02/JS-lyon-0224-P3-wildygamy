@@ -50,17 +50,17 @@ class PrizeSeeder extends AbstractSeeder {
       },
       {
         name: "Steam Card",
-        image: "/images_lots/pas-dimage.png",
+        image: "/images_lots/steam-card.png",
         points: "1500",
       },
       {
         name: "Pass journée Wildy-Gamy",
-        image: "",
+        image: "/images_lots/passe-une-journée.png",
         points: "2500",
       },
       {
         name: "Nintendo 64",
-        image: "/images_lots/pas-dimage.png",
+        image: "/images_lots/nitendo-64.png",
         points: "5000",
       },
     ];

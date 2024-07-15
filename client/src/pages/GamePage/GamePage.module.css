@@ -1,33 +1,90 @@
-.containergamepage {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.gameItem {
-  height: 23vh;
-  width: 32vw;
+.mainGamePage {
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+.containergamepage {
+  margin: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.gameItem {
+  height: auto;
+  width: 32vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
 
 .gameItem img {
   height: 18vh;
-  width: 12vh;
+  width: auto;
 }
 
 .gameItem p {
   color: var(--light-color);
-  font-size: 0.6rem;
-}
-
-button {
-  color: black;
+  font-size: 1rem;
+  margin: 0.1rem;
 }
 
 .buttonAdd {
   background-color: green;
+  color: white;
+  min-width: 10vw;
+  height: 3vh;
+  border-radius: 23px;
+  border: none;
+  font-size: 0.6rem;
+
+  box-shadow:
+    0 2px 2px greenyellow,
+    inset 0 0 1px greenyellow,
+    0 0 5px greenyellow,
+    inset 0 0 5px greenyellow,
+    0 0 4px greenyellow,
+    inset 0 0 3px greenyellow;
+}
+
+.buttonEdit {
+  background-color: var(--third-color);
+  margin-top: 1rem;
+  color: black;
+  min-width: 10vw;
+  height: 3vh;
+  border-radius: 23px;
+  border: none;
+  font-size: 0.6rem;
+
+  box-shadow:
+    0 2px 2px var(--third-color),
+    inset 0 0 1px var(--third-color),
+    0 0 5px yellow,
+    inset 0 0 5px var(--third-color),
+    0 0 4px var(--third-color),
+    inset 0 0 3px yellow;
+}
+
+.buttonDelete {
+  background-color: red;
+  margin-top: 1rem;
+  color: black;
+  min-width: 10vw;
+  height: 3vh;
+  border-radius: 23px;
+  border: none;
+  font-size: 0.6rem;
+
+  box-shadow:
+    0 2px 2px red,
+    inset 0 0 1px red,
+    0 0 5px red,
+    inset 0 0 5px red,
+    0 0 4px red,
+    inset 0 0 3px red;
 }

@@ -1,9 +1,11 @@
 .form-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   min-height: 100vh;
   background-color: #02020a;
+  position: relative;
 }
 
 .formAdmin {
