@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
   gap: 10rem;
   margin: auto;
   background-image: url("../../assets/images/access.jpg");
@@ -21,7 +20,7 @@
 }
 
 .button {
-  padding: 0.5rem 3rem 0.5rem 3rem;
+  padding: 0.5rem 3rem;
   border-radius: 1rem;
   border-style: none;
   color: #f8f7ff;
@@ -39,4 +38,28 @@
 .connect {
   color: #f8f7ff;
   font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .containerhomepage {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6rem;
+    gap: 5rem;
+  }
+
+  .image {
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .button {
+    padding: 1rem 4rem;
+    font-size: 1.5rem;
+  }
+
+  .connect {
+    font-size: 1.2rem;
+  }
 }

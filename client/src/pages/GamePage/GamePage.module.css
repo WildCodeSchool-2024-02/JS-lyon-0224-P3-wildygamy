@@ -5,6 +5,7 @@ main {
   align-items: center;
   justify-content: center;
 }
+
 .containergamepage {
   margin: 0.5rem;
   display: flex;
@@ -87,4 +88,37 @@ main {
     inset 0 0 5px red,
     0 0 4px red,
     inset 0 0 3px red;
+}
+
+@media (min-width: 768px) {
+  main {
+    margin-top: 2rem;
+  }
+
+  .containergamepage {
+    margin: 1rem;
+    justify-content: space-between;
+  }
+
+  .gameItem {
+    width: 22vw;
+    margin-bottom: 2rem;
+  }
+
+  .gameItem img {
+    height: 24vh;
+  }
+
+  .gameItem p {
+    font-size: 1.2rem;
+    margin: 0.2rem;
+  }
+
+  .buttonAdd,
+  .buttonEdit,
+  .buttonDelete {
+    min-width: 8vw;
+    height: 4vh;
+    font-size: 0.8rem;
+  }
 }
