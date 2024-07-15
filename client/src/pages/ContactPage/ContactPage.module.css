@@ -33,3 +33,32 @@ p {
 .info div {
   margin-bottom: 20px;
 }
+
+@media (min-width: 768px) {
+  .container {
+    padding: 40px;
+  }
+
+  h3 {
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-bottom: 30px;
+  }
+
+  .info {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .info div {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+
+  .backgroundImage {
+    margin-bottom: 30px;
+  }
+}

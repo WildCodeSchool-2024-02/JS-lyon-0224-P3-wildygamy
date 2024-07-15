@@ -16,15 +16,11 @@
     0 0 4px var(--third-color),
     inset 0 0 3px yellow;
 }
+
 .carroussel {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
-.image_carroussel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .gameItem {
@@ -43,4 +39,11 @@
   justify-content: center;
   align-items: center;
   padding-top: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .imageGames {
+    width: 20vw;
+    height: 10vh;
+  }
 }

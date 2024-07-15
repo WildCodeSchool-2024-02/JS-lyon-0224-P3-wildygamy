@@ -7,6 +7,7 @@
 .challenge h2 {
   font-size: 0.9rem;
 }
+
 .challengeImg {
   height: auto;
   width: 60vw;
@@ -32,4 +33,30 @@
   width: auto;
   z-index: 2;
   top: 58vh;
+}
+
+@media (min-width: 768px) {
+  .challenge {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .challenge h2 {
+    font-size: 1.2rem;
+  }
+
+  .challengeImg {
+    width: 30vw;
+  }
+
+  .challenge p {
+    font-size: 1rem;
+    max-width: 30vw;
+  }
+
+  .playIcon {
+    display: none;
+  }
 }

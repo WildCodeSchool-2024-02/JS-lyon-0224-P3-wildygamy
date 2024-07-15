@@ -2,9 +2,11 @@ import { Form, Link } from "react-router-dom";
 import { useState } from "react";
 import Logo from "../../assets/icones/logo.png";
 import styles from "./ConnectionPage.module.css";
+import { useUserContext } from "../../context/UseContext";
 
 export default function ConnectionPage() {
   const ApiUrl = import.meta.env.VITE_API_URL;
+  const {login} = useUserContext ();
   const [connectionForm, setConnectionForm] = useState({
     username: "",
     password: "",
@@ -97,6 +99,8 @@ export default function ConnectionPage() {
 
       if (response.status === 200) {
         const user = await response.json();
+        login(user.user);
+
         console.info(user);
         return true;
       }

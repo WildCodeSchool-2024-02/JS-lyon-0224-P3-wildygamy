@@ -7,9 +7,11 @@ const { browse, add } = require("../../../controllers/userActions");
 const { hashPassword } = require("../../../services/auth");
 
 
-const { login } = require("../../../controllers/AuthAction");
+const { login, logout } = require("../../../controllers/AuthAction");
 
 router.post("/login", login);
+
+router.get("/logout", logout);
 
 // Route to get a list of user
 router.get("/", browse);
