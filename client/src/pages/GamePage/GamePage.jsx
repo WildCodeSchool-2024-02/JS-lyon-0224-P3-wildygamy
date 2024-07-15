@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
 import styles from "./GamePage.module.css";
+import { useUserContext } from "../../context/UseContext";
 
 export default function MainPage() {
   const [games, setGames] = useState([]);
@@ -13,6 +14,8 @@ export default function MainPage() {
   };
   const notifyFail = (text) => toast.error(text);
   const notifySucess = (text) => toast.success(text);
+  const { user } = useUserContext();
+  const userIsAdmin = user?.role === "admin";
 
   const fetchGames = () => {
     fetch(`${ApiUrl}/api/games`)
@@ -66,11 +69,13 @@ export default function MainPage() {
 
   return (
     <>
-      <Link to="/admin/games/add">
-        <button type="button" className={styles.buttonAdd}>
-          ADD
-        </button>
-      </Link>
+      {userIsAdmin === true && (
+        <Link to="/admin/games/add">
+          <button type="button" className={styles.buttonAdd}>
+            ADD
+          </button>
+        </Link>
+      )}
       <div className={styles.containergamepage}>
         {games.map((game) => (
           <li className={styles.gameItem} key={game.id}>
@@ -82,18 +87,22 @@ export default function MainPage() {
                 src={game.image}
               />
             </Link>
-            <Link to={`/admin/games/edit/${game.id}`}>
-              <button type="button" className={styles.buttonEdit}>
-                EDIT
+            {userIsAdmin === true && (
+              <Link to={`/admin/games/edit/${game.id}`}>
+                <button type="button" className={styles.buttonEdit}>
+                  EDIT
+                </button>
+              </Link>
+            )}
+            {userIsAdmin === true && (
+              <button
+                type="button"
+                onClick={() => handleDelete(game.id)}
+                className={styles.buttonDelete}
+              >
+                DELETE
               </button>
-            </Link>
-            <button
-              type="button"
-              onClick={() => handleDelete(game.id)}
-              className={styles.buttonDelete}
-            >
-              DELETE
-            </button>
+            )}
           </li>
         ))}
       </div>
