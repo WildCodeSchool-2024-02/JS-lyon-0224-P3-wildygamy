@@ -31,6 +31,7 @@ const login = async (req, res, next) => {
       sameSite: "Lax",
       maxAge: 3600000,
     }).json({user});
+
     } else {
       res.sendStatus(422);
     }

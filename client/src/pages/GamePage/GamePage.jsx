@@ -32,6 +32,7 @@ export default function MainPage() {
         headers: {
           "Content-Type": "application/json",
         },
+        credentials: "include",
         body: JSON.stringify({ id }),
       });
       if (response.status === 200) {
