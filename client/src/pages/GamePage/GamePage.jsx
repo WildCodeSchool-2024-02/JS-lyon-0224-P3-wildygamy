@@ -68,44 +68,46 @@ export default function MainPage() {
   };
 
   return (
-    <>
-      {userIsAdmin === true && (
+
+      <div className={styles.mainGamePage}>
+        {userIsAdmin === true && (
         <Link to="/admin/games/add">
-          <button type="button" className={styles.buttonAdd}>
-            ADD
-          </button>
-        </Link>
-      )}
+            <button type="button" className={styles.buttonAdd}>
+              ADD
+            </button>
+          </Link>
+        )}
       <div className={styles.containergamepage}>
-        {games.map((game) => (
-          <li className={styles.gameItem} key={game.id}>
-            <p>{game.name}</p>
-            <Link to={`/games/${game.id}`}>
-              <img
-                className={styles.imageGames}
-                alt={game.name}
-                src={game.image}
-              />
-            </Link>
-            {userIsAdmin === true && (
-              <Link to={`/admin/games/edit/${game.id}`}>
-                <button type="button" className={styles.buttonEdit}>
-                  EDIT
-                </button>
+          {games.map((game) => (
+            <li className={styles.gameItem} key={game.id}>
+              <p>{game.name}</p>
+              <Link to={`/games/${game.id}`}>
+                <img
+                  className={styles.imageGames}
+                  alt={game.name}
+                  src={game.image}
+                />
               </Link>
-            )}
+              {userIsAdmin === true && (
+              <Link to={`/admin/games/edit/${game.id}`}>
+                  <button type="button" className={styles.buttonEdit}>
+                    EDIT
+                  </button>
+                </Link>
+              )}
             {userIsAdmin === true && (
               <button
-                type="button"
-                onClick={() => handleDelete(game.id)}
-                className={styles.buttonDelete}
-              >
-                DELETE
-              </button>
-            )}
+                  type="button"
+                  onClick={() => handleDelete(game.id)}
+                  className={styles.buttonDelete}
+                >
+                  DELETE
+                </button>
+              )}
           </li>
-        ))}
+          ))}
+        </div>
       </div>
-    </>
+
   );
 }
