@@ -11,7 +11,8 @@
 .formAdmin {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   padding: 20px;
   background: #a882dd;
   border-radius: 8px;
@@ -41,7 +42,7 @@
 
 .checkbox-container label {
   margin-right: 10px;
-  width: 100px;
+  width: auto;
 }
 
 .checkbox-container input[type="checkbox"] {
@@ -58,4 +59,10 @@
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .formAdmin {
+    width: 300px;
+  }
 }
