@@ -18,6 +18,7 @@ function FormAdminGames() {
     synopsis: "",
     id,
   });
+
   useEffect(() => {
     if (editMode === true) {
       fetch(`${ApiUrl}/api/games/${id}`)
@@ -66,8 +67,23 @@ function FormAdminGames() {
       console.error(err);
     }
   };
+
+  const handleLogout = () => {
+    localStorage.removeItem("authToken");
+    sessionStorage.removeItem("authToken");
+    document.cookie = "authToken=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
+    navigate("/login");
+  };
+
   return (
     <div className={styles["form-container"]}>
+      <button
+        type="button"
+        className={styles.logoutButton}
+        onClick={handleLogout}
+      >
+        Déconnexion
+      </button>
       <form className={styles.formAdmin}>
         <label htmlFor="name">Nom du jeu</label>
         <input
@@ -134,4 +150,5 @@ function FormAdminGames() {
     </div>
   );
 }
+
 export default FormAdminGames;
