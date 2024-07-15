@@ -143,7 +143,7 @@ function FormAdminGames() {
         />
 
         <button type="submit" onClick={handleSubmit}>
-          {editMode === false ? "Ajouter" : "Edit"}
+          {editMode === false ? "Ajouter" : "Modifier"}
         </button>
       </form>
     </div>
