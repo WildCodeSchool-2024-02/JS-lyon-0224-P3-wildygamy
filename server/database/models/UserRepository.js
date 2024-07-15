@@ -58,6 +58,19 @@ class UserRepository extends AbstractRepository {
 
     return rows[0];
   }
+  
+  async findUserRole(id) {
+    // Execute the SQL SELECT query to retrieve a specific user by its email
+    const [rows] = await this.database.query(
+     `select role from ${this.table} where id = ?`,
+      [id]
+    );
+
+    // Return the first row of the result, which represents the user
+    return rows[0];
+  }
 }
+
+
 
 module.exports = UserRepository;

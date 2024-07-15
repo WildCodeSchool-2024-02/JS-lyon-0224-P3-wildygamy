@@ -51,6 +51,7 @@ function FormAdminGames() {
           headers: {
             "Content-Type": "application/json",
           },
+          credentials: "include",
           body: JSON.stringify(gameForm),
         }
       );

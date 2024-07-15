@@ -1,5 +1,6 @@
 const argon2 = require("argon2");
 const jwt = require("jsonwebtoken");
+const tables = require("../../database/tables");
 
 // Options de hachage (voir documentation : https://github.com/ranisalt/node-argon2/wiki/Options)
 // Recommandations **minimales** de l'OWASP : https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html
@@ -49,7 +50,6 @@ const verifyToken = (req, res, next) => {
     // Vérifier la validité du token (son authenticité et sa date d'expériation)
     // En cas de succès, le payload est extrait et décodé
     req.auth = jwt.verify(token, process.env.APP_SECRET);
-
     next();
   } catch (err) {
     console.error(err);
@@ -58,7 +58,36 @@ const verifyToken = (req, res, next) => {
   }
 };
 
+const verifyCookie = (req, res, next) => {
+  try {
+    const token = req.cookies.access_token;
+    if (!token) {
+      return res.sendStatus(401);
+    }
+    req.auth = jwt.verify(token, process.env.APP_SECRET);
+    return next();
+  } catch (err) {
+    return res.sendStatus(404).send("Il y a une erreur");
+  }
+};
+
+const verifyIsAdmin = async (req, res, next) => {
+  try {
+    const { sub } = req.auth;
+
+    const userRole = await tables.user.findUserRole(sub);
+    if (userRole.role !== "admin") {
+      return res.status(403).json("Vous ne pouvez pas faire cette action");
+    }
+    return next();
+  } catch (err) {
+    return res.sendStatus(404);
+  }
+};
+
 module.exports = {
   hashPassword,
   verifyToken,
+  verifyCookie,
+  verifyIsAdmin,
 };
