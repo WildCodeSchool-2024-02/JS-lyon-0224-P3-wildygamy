@@ -59,24 +59,3 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
-.logoutButton {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: transparent;
-  border: 2px solid white;
-  color: white;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  transition:
-    background-color 0.3s,
-    color 0.3s;
-}
-
-.logoutButton:hover {
-  background-color: white;
-  color: black;
-}
