@@ -30,10 +30,10 @@ const add = async (req, res, next) => {
 
 const edit = async (req, res, next) => {
   // Extract the item data from the request body
-  const news = req.body;
+  const game = req.body;
   try {
     // Update the item into the database
-    const updatedGame = await tables.game.update(news);
+    const updatedGame = await tables.game.update(game);
     // Respond with HTTP 201 (OK) and the response data
     res.status(200).json({ updatedGame });
   } catch (err) {
