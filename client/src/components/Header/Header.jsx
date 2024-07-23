@@ -3,8 +3,8 @@ import logo from "../../assets/icones/logo.png";
 // import profil from "../../assets/icones/profil.png";
 import styles from "./Header.module.css";
 import { useUserContext } from "../../context/UseContext";
-import Login from "../../../public/login.png"
-import Cancel from "../../../public/cancel.png"
+import Login from "../../assets/icones/login.png"
+import Cancel from "../../assets/icones/cancel.png"
 
 export default function Header() {
   const { logout } = useUserContext();
