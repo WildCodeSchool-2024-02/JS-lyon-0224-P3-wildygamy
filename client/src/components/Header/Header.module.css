@@ -13,10 +13,6 @@
   height: 6rem;
 }
 
-.profil {
-  height: 3rem;
-}
-
 .list {
   list-style: none;
   display: flex;
@@ -36,4 +32,22 @@
 
 .list_contact {
   margin-left: 1rem;
+}
+
+.loginIcon {
+  width: 15vw;
+}
+
+.cancelIcon {
+  width: 15vw;
+}
+
+@media (min-width: 768px) {
+  .loginIcon {
+    width: 5vw;
+  }
+
+  .cancelIcon {
+    width: 5vw;
+  }
 }

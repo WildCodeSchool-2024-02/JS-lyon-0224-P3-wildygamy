@@ -21,14 +21,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-around;
   padding: 0.1rem 3rem 0 3rem;
 }
 
 .logoconnection {
   width: 20vw;
   height: auto;
-  padding: 5rem 0 0.8rem 0;
 }
 
 .connectionCard > h3 {
@@ -48,7 +47,6 @@
   text-decoration: underline;
   font-weight: 30;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  padding: 1.9rem 0 0 0;
 }
 
 .formconnection {
@@ -117,13 +115,11 @@
 @media (min-width: 768px) {
   .connectionCard {
     width: 40vw;
-    height: auto;
-    padding: 2rem 4rem;
+    height: 98vh;
   }
 
   .logoconnection {
     width: 10vw;
-    padding: 3rem 0 1rem 0;
   }
 
   .formconnection {

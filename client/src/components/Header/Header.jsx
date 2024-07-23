@@ -3,12 +3,16 @@ import logo from "../../assets/icones/logo.png";
 // import profil from "../../assets/icones/profil.png";
 import styles from "./Header.module.css";
 import { useUserContext } from "../../context/UseContext";
+import Login from "../../../public/login.png"
+import Cancel from "../../../public/cancel.png"
 
 export default function Header() {
-  const {logout}= useUserContext();
+  const { logout } = useUserContext();
   const handleLogout = () => {
-    logout (false)
-  }
+    logout(false);
+  };
+  const { user } = useUserContext();
+  const userIsLogged = user !== null;
   return (
     <div className={styles.containerheader}>
       <Link className={styles.link} to="/games">
@@ -32,10 +36,24 @@ export default function Header() {
         </li>
       </ul>
       <Link className={styles.link} to="/admin/games/add">
-        <button onClick={handleLogout}
-        type='button'
-         className={styles.profil} > XXXX
-        </button>
+        {userIsLogged === true ? (
+          <button
+            onClick={handleLogout}
+            type="button"
+            className={styles.profil}
+          >
+            <img className={styles.cancelIcon} src={Cancel} alt="icone cancel" />
+          </button>
+        ) : (
+          <Link to="/connection">
+            <button
+              type="button"
+              className={styles.profil}
+            >
+              <img className={styles.loginIcon} src={Login} alt="icone login" />
+            </button>
+          </Link>
+        )}
       </Link>
     </div>
   );
