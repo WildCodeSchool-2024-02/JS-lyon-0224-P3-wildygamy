@@ -18,7 +18,7 @@ class GameSeeder extends AbstractSeeder {
         category: "Arcade, Labyrinthe",
         is_challenge: true,
         is_popular: false,
-        image: "/image_back/pac_man.webp",
+        image: "/image_back/pacman.jpg",
         synopsis:
           "Vous incarnez Pac-Man perdu au beau milieu d'un labyrinthe infesté de fantômes pouvant être éliminés lorsque Pac-Man avale des pac-gommes.",
       },
@@ -45,7 +45,7 @@ class GameSeeder extends AbstractSeeder {
         category: "Combat",
         is_challenge: false,
         is_popular: true,
-        image: "/image_back/street_fighter_ii.webp",
+        image: "/image_back/street_fighter.jpg",
         synopsis:
           "Second épisode du jeu de combat, vous donnant le choix entre 8 personnages avec des spécificités qui leur sont propre en solo comme en multijoueurs. Sorti en 1991 sur système d'arcade CP System, et sujet à diverses adaptations, dont la plus célèbre, sur Super Nintendo.",
       },
@@ -90,7 +90,7 @@ class GameSeeder extends AbstractSeeder {
         category: "Course",
         is_challenge: false,
         is_popular: false,
-        image: "/image_back/outrun.webp",
+        image: "/image_back/outrun.jpg",
         synopsis:
           "Out Run (アウトラン), également orthographié OutRun ou Outrun, est un jeu vidéo d'arcade de course automobile conçu par Yū Suzuki et Sega-AM2 et commercialisé par Sega en 1986 sur borne d'arcade. Il fut porté sur de nombreux autres supports. Le jeu a été un grand succès chez les amateurs d'arcade, à tel point qu'il est souvent considéré comme un des meilleurs jeu de course d'arcade. ",
       },
@@ -99,7 +99,7 @@ class GameSeeder extends AbstractSeeder {
         category: "Combat",
         is_challenge: false,
         is_popular: false,
-        image: "/image_back/mortal_kombat.webp",
+        image: "/image_back/mortal_kombat.jpg",
         synopsis:
           "Mortal Kombat (communément abrégé en MK) est un jeu vidéo de Midway Manufacturing Company sorti sur borne d'arcade en 1992 puis sur de multiples autres plateformes. Il est célèbre pour sa violence, sa brutalité et son côté gore. Battez vos adversaires pour défier le guerrier Shokan nommé Goro, champion du tournoi depuis plus de 500 ans.",
       },

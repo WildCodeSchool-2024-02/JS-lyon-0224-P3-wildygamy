@@ -20,18 +20,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .gameItem img {
-  height: 18vh;
-  width: auto;
+  height: 15vh;
+  width: 40vw;
 }
 
 .gameItem p {
   color: var(--light-color);
   font-size: 1rem;
   margin: 0.1rem;
+  margin-bottom: 0.5rem;
 }
 
 .buttonAdd {
@@ -102,7 +103,8 @@
   }
 
   .gameItem img {
-    height: 24vh;
+    height: 25vh;
+    width: 20vw;
   }
 
   .gameItem p {

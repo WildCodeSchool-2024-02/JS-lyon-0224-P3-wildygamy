@@ -73,7 +73,7 @@ export default function MainPage() {
         {userIsAdmin === true && (
         <Link to="/admin/games/add">
             <button type="button" className={styles.buttonAdd}>
-              ADD
+              AJOUTER
             </button>
           </Link>
         )}
@@ -91,7 +91,7 @@ export default function MainPage() {
               {userIsAdmin === true && (
               <Link to={`/admin/games/edit/${game.id}`}>
                   <button type="button" className={styles.buttonEdit}>
-                    EDIT
+                    MODIFIER
                   </button>
                 </Link>
               )}
@@ -101,7 +101,7 @@ export default function MainPage() {
                   onClick={() => handleDelete(game.id)}
                   className={styles.buttonDelete}
                 >
-                  DELETE
+                  SUPPRIMER
                 </button>
               )}
           </li>

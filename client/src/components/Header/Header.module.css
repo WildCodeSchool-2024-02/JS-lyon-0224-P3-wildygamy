@@ -1,5 +1,5 @@
 .containerheader {
-  background-color: #a882dd;
+  background-color: var(--main-color);
   margin: 0;
   font-family: "Press Start 2P", system-ui;
   font-size: 0.6rem;
@@ -16,7 +16,7 @@
 .list {
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .list_nosjeux {
-  padding-left: 2rem;
+  padding-left: 1rem;
 }
 
 .list_contact {
@@ -49,5 +49,13 @@
 
   .cancelIcon {
     width: 8vw;
+  }
+
+  .containerheader {
+    font-size: 1rem;
+  }
+
+  .list {
+    gap: 8rem;
   }
 }

@@ -7,7 +7,7 @@ export default function CarrousselJeux({ games }) {
 
   return (
     <>
-      <h2>Nos Jeux</h2>
+      <h2>Les Favoris</h2>
       <div className={styles.carroussel}>
         {popularGames.map((game) => (
           <li className={styles.gameItem} key={game.id}>
