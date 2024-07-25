@@ -38,8 +38,31 @@ function FormAdminGames() {
   }, [ApiUrl, editMode, id]);
 
   const handleUpdateForm = (e) => {
-    setGameForm({ ...gameForm, [e.target.name]: e.target.value });
-  };
+    // Extraire le nom et la valeur du champ de formulaire qui a déclenché l'événement
+    const {name,value} = e.target;
+
+    // Mettre à jour l'état du formulaire
+    setGameForm(prevForm => {
+        // Créer un nouvel objet avec toutes les propriétés actuelles de gameForm
+        const updatedForm = { ...prevForm };
+        if (e.target.type === "checkbox"){
+          if(e.target.checked === true){
+            updatedForm[name] = 1;
+          }
+          else {
+            updatedForm[name] = 0;
+          }
+        }
+        else {
+          updatedForm[name] = value;
+        }
+
+        // Mettre à jour la propriété correspondant au nom du champ modifié avec la nouvelle valeur
+
+        // Retourner l'objet mis à jour pour mettre à jour l'état
+        return updatedForm;
+    });
+};
 
   const handleSubmit = async (e) => {
     e.preventDefault();

@@ -2,7 +2,7 @@
 
 :root {
   /*COULEURS*/
-  --main-color: #a882dd;
+  --main-color: #2c055c;
   --secondary-color: #2f3061;
   --third-color: #fde74c;
   --light-color: #f8f7ff;
@@ -15,7 +15,7 @@
   --title-font-family: "Press Start 2P", system-ui;
   --title-font-family-bold: "Press Start 2P", sans-serif, bold;
   --title-font-family-italic: "Press Start 2P", sans-serif, italic;
-  --title-font-size: 1.2rem;
+  --title-font-size: 1.1rem;
 
   /* Générique */
   --main-font-size: 0.8rem;
@@ -52,6 +52,7 @@ h2 {
   font-family: var(--title-font-family);
   font-size: var(--title-font-size);
   color: var(--third-color);
+  line-height: 2rem;
   margin: 0.5rem;
 }
 
@@ -59,6 +60,7 @@ h3 {
   font-family: var(--title-font-family);
   font-size: var(--title-font-size);
   color: var(--dark-color);
+  line-height: 2rem;
   margin: 0.5rem;
 }
 
@@ -66,6 +68,7 @@ p {
   font-family: var(--main-font-family);
   font-size: var(--title-font-size);
   color: var(--font-color);
+  line-height: 2rem;
   margin: 0.5rem;
 }
 

@@ -7,7 +7,7 @@ export default function CarrousselJeux({ games }) {
 
   return (
     <>
-      <h2>Nos Jeux</h2>
+      <h2>Les Favoris</h2>
       <div className={styles.carroussel}>
         {popularGames.map((game) => (
           <li className={styles.gameItem} key={game.id}>
@@ -34,7 +34,7 @@ CarrousselJeux.propTypes = {
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
       image: PropTypes.string.isRequired,
-      is_popular: PropTypes.bool.isRequired,
+      is_popular: PropTypes.number.isRequired,
     }).isRequired
   ).isRequired,
 };
