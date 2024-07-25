@@ -1,5 +1,5 @@
 .containerFooter {
-  background-color: #a882dd;
+  background-color: var(--main-color);
   padding: 1rem;
   margin: 0;
   font-family: "Press Start 2P", system-ui;
