@@ -37,9 +37,9 @@
 
 @media (min-width: 768px) {
   .challenge {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     gap: 2rem;
   }
 
@@ -54,9 +54,5 @@
   .challenge p {
     font-size: 1rem;
     max-width: 30vw;
-  }
-
-  .playIcon {
-    display: none;
   }
 }

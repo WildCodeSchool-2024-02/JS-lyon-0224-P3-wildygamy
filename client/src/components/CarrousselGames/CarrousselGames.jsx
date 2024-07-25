@@ -34,7 +34,7 @@ CarrousselJeux.propTypes = {
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
       image: PropTypes.string.isRequired,
-      is_popular: PropTypes.bool.isRequired,
+      is_popular: PropTypes.number.isRequired,
     }).isRequired
   ).isRequired,
 };

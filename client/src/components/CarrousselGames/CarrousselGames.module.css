@@ -21,6 +21,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  flex-direction: column;
 }
 
 .gameItem {
@@ -44,6 +45,14 @@
 @media (min-width: 768px) {
   .imageGames {
     width: 20vw;
-    height: 10vh;
+    height: 35vh;
+  }
+
+  .buttonGames {
+    font-size: 0.8rem;
+  }
+
+  .carroussel {
+    flex-direction: row;
   }
 }

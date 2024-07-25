@@ -53,18 +53,10 @@ class GameRepository extends AbstractRepository {
   }
 
   async update(game) {
-    let gameChallenge = false;
-    let gamePopular = false;
-    if (game.challenge === "on") {
-      gameChallenge = true;
-    }
-    if (game.popular === "on") {
-      gamePopular = true;
-    }
     const gameId = parseInt(game.id,10)
     const [result] = await this.database.query(
       `UPDATE ${this.table} SET name = ?, category = ?, is_challenge = ?, is_popular = ?, image = ?, synopsis = ? WHERE id = ?`,
-      [game.name, game.category, gameChallenge, gamePopular, game.image, game.synopsis, gameId]
+      [game.name, game.category, game.challenge, game.popular, game.image, game.synopsis, gameId]
     );
     return result;
   }

@@ -84,3 +84,21 @@
   color: var(--light-color);
   cursor: pointer;
 }
+
+@media (min-width: 768px) {
+  .cardRegistration {
+    width: 50vw;
+  }
+
+  .formRegistration input {
+    width: 30vw;
+  }
+
+  .formRegistration button {
+    width: 25vw;
+  }
+
+  .formRegistration {
+    width: 30vw;
+  }
+}
