@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Pacman from "react-pacman";
 import PropTypes from "prop-types";
-import Play from "../../assets/icones/play.png";
+import Play from "../../assets/icones/start.png";
 import Styles from "./Challenge.module.css";
 
 export default function Challenge({ game }) {

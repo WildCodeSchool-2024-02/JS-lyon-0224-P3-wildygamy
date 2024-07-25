@@ -30,10 +30,15 @@
 }
 
 .playIcon {
-  height: 10vh;
+  height: 8vh;
   width: auto;
   z-index: 2;
   top: 58vh;
+}
+
+.playButton {
+  background-color: transparent;
+  border: none;
 }
 
 @media (min-width: 768px) {
@@ -49,8 +54,8 @@
   }
 
   .challengeImg {
-    width: 80vw;
-    height: 60vh;
+    width: 60vw;
+    height: 80vh;
   }
 
   .challenge p {
