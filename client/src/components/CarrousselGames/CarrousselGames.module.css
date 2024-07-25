@@ -1,12 +1,12 @@
 .buttonGames {
   background-color: var(--third-color);
   color: black;
-  width: 20vw;
+  width: 80vw;
   height: 5vh;
   border-radius: 23px;
   border: none;
   z-index: 1;
-  font-size: 0.35rem;
+  font-size: 0.85rem;
 
   box-shadow:
     0 2px 2px var(--third-color),
@@ -20,8 +20,10 @@
 .carroussel {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: column;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .gameItem {
@@ -33,19 +35,20 @@
 }
 
 .imageGames {
-  width: 30vw;
-  height: 16vh;
+  width: 70vw;
+  height: 25vh;
   border: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 0.75rem;
+  padding-top: 1.5rem;
 }
 
 @media (min-width: 768px) {
   .imageGames {
-    width: 20vw;
-    height: 35vh;
+    width: 30vw;
+    height: 40vh;
+    margin-bottom: 2rem;
   }
 
   .buttonGames {
@@ -54,5 +57,10 @@
 
   .carroussel {
     flex-direction: row;
+    gap: 0rem;
+  }
+
+  .buttonGames {
+    width: 30vw;
   }
 }

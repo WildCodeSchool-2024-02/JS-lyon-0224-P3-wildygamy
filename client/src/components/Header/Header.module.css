@@ -16,7 +16,7 @@
 .list {
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .list_nosjeux {
-  padding-left: 2rem;
+  padding-left: 1rem;
 }
 
 .list_contact {
@@ -49,5 +49,13 @@
 
   .cancelIcon {
     width: 8vw;
+  }
+
+  .containerheader {
+    font-size: 1rem;
+  }
+
+  .list {
+    gap: 8rem;
   }
 }

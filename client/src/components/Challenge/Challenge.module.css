@@ -9,8 +9,8 @@
 }
 
 .challengeImg {
-  height: auto;
-  width: 60vw;
+  height: 30vh;
+  width: 80vw;
   border-radius: 4vh;
   box-shadow:
     0 0 15px var(--third-color),
@@ -26,6 +26,7 @@
   color: var(--light-color);
   font-size: 0.9rem;
   padding-top: 2rem;
+  margin: 1rem 1.5rem;
 }
 
 .playIcon {
@@ -48,7 +49,8 @@
   }
 
   .challengeImg {
-    width: 30vw;
+    width: 80vw;
+    height: 60vh;
   }
 
   .challenge p {
