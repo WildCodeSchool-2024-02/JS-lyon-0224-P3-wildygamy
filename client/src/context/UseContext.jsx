@@ -8,8 +8,8 @@ const UserContext = createContext();
 export function UserProvider({ children }) {
   const ApiUrl = import.meta.env.VITE_API_URL;
   const navigate = useNavigate();
-
-  const [user, setUser] = useLocalStorage("admin", null);
+  /* Calling the custom hook setting the key name and its default value */
+  const [user, setUser] = useLocalStorage("user", null);
 
   const login = (userData) => {
     setUser(userData);

@@ -3,7 +3,9 @@ import PropTypes from "prop-types";
 import styles from "./CarrousselGames.module.css";
 
 export default function CarrousselJeux({ games }) {
-  const popularGames = games.filter((game) => game.is_popular);
+
+  /* Creating a variable to store the popular games */
+  const popularGames = games.filter((game) => game.is_popular === 1);
 
   return (
     <>

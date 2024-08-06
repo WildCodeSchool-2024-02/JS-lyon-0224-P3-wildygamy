@@ -7,20 +7,24 @@ import { useUserContext } from "../../context/UseContext";
 export default function ConnectionPage() {
   const ApiUrl = import.meta.env.VITE_API_URL;
   const {login} = useUserContext ();
+  /* State to store the data in the form */
   const [connectionForm, setConnectionForm] = useState({
     username: "",
     password: "",
   });
 
+  /* State to get the errors from the form */
   const [formErrors, setFormErrors] = useState({
     username: "",
     password: "",
   });
 
+  /* Function to save the data */
   const handleChange = (e) => {
     setConnectionForm({ ...connectionForm, [e.target.name]: e.target.value });
   };
 
+  /* Function to handle the error messages */
   const setError = (name, message) => {
     setFormErrors((previousErrors) => ({
       ...previousErrors,
@@ -28,7 +32,7 @@ export default function ConnectionPage() {
     }));
   };
 
-  // function for sucess
+  // function for success
   const setSucess = (name) => {
     setFormErrors((previousErrors) => ({
       ...previousErrors,

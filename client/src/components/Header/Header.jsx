@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/icones/logo.png";
-// import profil from "../../assets/icones/profil.png";
 import styles from "./Header.module.css";
 import { useUserContext } from "../../context/UseContext";
 import Login from "../../assets/icones/login.png"

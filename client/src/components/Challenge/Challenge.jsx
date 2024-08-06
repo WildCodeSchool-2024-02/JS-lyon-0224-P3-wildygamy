@@ -5,14 +5,18 @@ import Play from "../../assets/icones/start.png";
 import Styles from "./Challenge.module.css";
 
 export default function Challenge({ game }) {
+  /* State to know if the game is started or not */
   const [playing, setPlaying] = useState(false);
 
+  /* function to change the status of the state */
   const restartGame = () => {
     setPlaying(!playing);
   };
 
+  /* useEffect to disable/enable the scrolling on the page while the game is started/stopped */
   useEffect(() => {
     const disableScroll = () => {
+      /* Hidding content that is displayed over the body */
       document.body.style.overflow = "hidden";
     };
 
@@ -20,12 +24,12 @@ export default function Challenge({ game }) {
       document.body.style.overflow = "auto";
     };
 
-    if (playing) {
+    if (playing === true) {
       disableScroll();
     } else {
       enableScroll();
     }
-
+    /* Prevent eventuals troubles with the scrolling not being enable while needed */
     return () => {
       enableScroll();
     };
