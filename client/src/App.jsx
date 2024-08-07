@@ -7,15 +7,16 @@ import Footer from "./components/Footer/Footer";
 import "./App.css";
 
 function App() {
-  // permet de cacher header & footer pour la page d'accueil seulement grâce au useLocation
+  // Allow to hide the header/footer in the welcome page only thanks to the hook useLocation
   const location = useLocation();
   const hideHeaderFooter =
     ["/", "/connection", "/registration"].includes(location.pathname) === true;
   return (
-    // Si hideHeaderFooter est false affiche le Header/Footer
-
     <UserProvider>
-      {hideHeaderFooter === false && <Header />}
+      {hideHeaderFooter ===
+        false /* If hideHeaderFooter is false the header is not displayed */ && (
+        <Header />
+      )}
       <main>
         <Outlet />
       </main>
