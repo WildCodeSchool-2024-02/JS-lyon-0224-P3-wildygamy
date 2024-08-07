@@ -22,12 +22,13 @@ export default function MainPage() {
       .then((response) => response.json())
       .then((data) => setGames(data));
   };
-
+  /* useEffect to reload the data when a game is deleted from the database */
   useEffect(() => {
     fetchGames();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [refreshData]);
 
+  /* Function to be able to handle the deletion of a game */
   const handleDelete = async (id) => {
     try {
       const response = await fetch(`${ApiUrl}/api/games/delete`, {
@@ -39,7 +40,7 @@ export default function MainPage() {
         body: JSON.stringify({ id }),
       });
       if (response.status === 200) {
-        notifySucess("Le jeu a été delete", {
+        notifySucess("Le jeu a été effacé", {
           position: "bottom-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -61,53 +62,52 @@ export default function MainPage() {
           theme: "colored",
         });
       }
-      handleRefresh(); // to refresh the data when the news has been deleted
+      handleRefresh(); // to refresh the data when the game has been deleted
     } catch (err) {
       console.error(err);
     }
   };
 
   return (
-
-      <div className={styles.mainGamePage}>
-        {userIsAdmin === true && (
+    <div className={styles.mainGamePage}>
+      {userIsAdmin ===
+        true /* check if the user is an admin to display the buttons */ && (
         <Link to="/admin/games/add">
-            <button type="button" className={styles.buttonAdd}>
-              AJOUTER
-            </button>
-          </Link>
-        )}
+          <button type="button" className={styles.buttonAdd}>
+            AJOUTER
+          </button>
+        </Link>
+      )}
       <div className={styles.containergamepage}>
-          {games.map((game) => (
-            <li className={styles.gameItem} key={game.id}>
-              <p>{game.name}</p>
-              <Link to={`/games/${game.id}`}>
-                <img
-                  className={styles.imageGames}
-                  alt={game.name}
-                  src={game.image}
-                />
-              </Link>
-              {userIsAdmin === true && (
+        {games.map((game) => (
+          <li className={styles.gameItem} key={game.id}>
+            <p>{game.name}</p>
+            <Link to={`/games/${game.id}`}>
+              <img
+                className={styles.imageGames}
+                alt={game.name}
+                src={game.image}
+              />
+            </Link>
+            {userIsAdmin === true && (
               <Link to={`/admin/games/edit/${game.id}`}>
-                  <button type="button" className={styles.buttonEdit}>
-                    MODIFIER
-                  </button>
-                </Link>
-              )}
+                <button type="button" className={styles.buttonEdit}>
+                  MODIFIER
+                </button>
+              </Link>
+            )}
             {userIsAdmin === true && (
               <button
-                  type="button"
-                  onClick={() => handleDelete(game.id)}
-                  className={styles.buttonDelete}
-                >
-                  SUPPRIMER
-                </button>
-              )}
+                type="button"
+                onClick={() => handleDelete(game.id)}
+                className={styles.buttonDelete}
+              >
+                SUPPRIMER
+              </button>
+            )}
           </li>
-          ))}
-        </div>
+        ))}
       </div>
-
+    </div>
   );
 }

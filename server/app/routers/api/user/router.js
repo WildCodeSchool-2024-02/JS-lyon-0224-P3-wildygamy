@@ -6,7 +6,6 @@ const router = express.Router();
 const { browse, add } = require("../../../controllers/userActions");
 const { hashPassword } = require("../../../services/auth");
 
-
 const { login, logout } = require("../../../controllers/AuthAction");
 
 router.post("/login", login);
@@ -20,4 +19,3 @@ router.get("/", browse);
 router.post("/add", hashPassword, add);
 
 module.exports = router;
- 

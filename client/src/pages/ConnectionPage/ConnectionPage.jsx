@@ -47,6 +47,7 @@ export default function ConnectionPage() {
     return regex.test(String(password));
   };
 
+  /* Function to validate all the inputs after the verificators */
   const validInputs = () => {
     const { username, password } = connectionForm;
 
@@ -92,6 +93,7 @@ export default function ConnectionPage() {
     return allValid;
   };
 
+  /* Function to let user log */
   const handleLogin = async (dataForm) => {
     try {
       const response = await fetch(`${ApiUrl}/api/user/login`, {
@@ -104,8 +106,6 @@ export default function ConnectionPage() {
       if (response.status === 200) {
         const user = await response.json();
         login(user.user);
-
-        console.info(user);
         return true;
       }
     } catch (error) {
@@ -115,6 +115,7 @@ export default function ConnectionPage() {
     return false;
   };
 
+  /* Function to be able to send the data */
   const handleSubmit = async (e) => {
     e.preventDefault();
 

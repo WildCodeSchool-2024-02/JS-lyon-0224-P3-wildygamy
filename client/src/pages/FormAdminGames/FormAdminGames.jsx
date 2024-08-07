@@ -7,6 +7,7 @@ function FormAdminGames() {
   const navigate = useNavigate();
   const { id } = useParams();
 
+  /* State to know if we are adding a game or editing one */
   const [editMode] = useState(id !== undefined);
 
   const [gameForm, setGameForm] = useState({
@@ -19,6 +20,7 @@ function FormAdminGames() {
     id,
   });
 
+  /* useEffet to get the data from a game if we wish to edit one */
   useEffect(() => {
     if (editMode === true) {
       fetch(`${ApiUrl}/api/games/${id}`)
@@ -38,32 +40,29 @@ function FormAdminGames() {
   }, [ApiUrl, editMode, id]);
 
   const handleUpdateForm = (e) => {
-    // Extraire le nom et la valeur du champ de formulaire qui a déclenché l'événement
-    const {name,value} = e.target;
+    // Extract the name and the value from the input of the form that triggered the event
+    const { name, value } = e.target;
 
-    // Mettre à jour l'état du formulaire
-    setGameForm(prevForm => {
-        // Créer un nouvel objet avec toutes les propriétés actuelles de gameForm
-        const updatedForm = { ...prevForm };
-        if (e.target.type === "checkbox"){
-          if(e.target.checked === true){
-            updatedForm[name] = 1;
-          }
-          else {
-            updatedForm[name] = 0;
-          }
+    // Update the status of the form
+    setGameForm((prevForm) => {
+      // Create a new object with all the actual properties of gameForm
+      const updatedForm = { ...prevForm };
+      if (e.target.type === "checkbox") {
+        if (e.target.checked === true) {
+          updatedForm[name] = 1;
+        } else {
+          updatedForm[name] = 0;
         }
-        else {
-          updatedForm[name] = value;
-        }
+      } else {
+        updatedForm[name] = value;
+      }
 
-        // Mettre à jour la propriété correspondant au nom du champ modifié avec la nouvelle valeur
-
-        // Retourner l'objet mis à jour pour mettre à jour l'état
-        return updatedForm;
+      // Retourner l'objet mis à jour pour mettre à jour l'état
+      return updatedForm;
     });
-};
+  };
 
+  /* Function to send the data that need to be added or edited */
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -84,7 +83,7 @@ function FormAdminGames() {
         const { insertId } = await response.json();
         navigate(`/games/${insertId}`);
       } else {
-        console.info("l'opération a échouée");
+        console.info("l'opération a échoué");
       }
     } catch (err) {
       console.error(err);

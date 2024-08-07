@@ -4,12 +4,13 @@ import styles from "./PrizePage.module.css";
 
 export default function PrizePage() {
   const prizes = useLoaderData();
-  const littlePrize = prizes.filter((prize) => prize.points < 400);
+  // Functions to filter prizes according to their price
+  const littlePrize = prizes.filter((prize) => prize.points <= 400);
   const mediumPrize = prizes.filter(
-    (prize) => prize.points > 400 && prize.points < 900
+    (prize) => prize.points > 400 && prize.points <= 900
   );
   const bigPrize = prizes.filter(
-    (prize) => prize.points > 900 && prize.points < 3000
+    (prize) => prize.points > 900 && prize.points <= 3000
   );
   const amazingPrize = prizes.filter((prize) => prize.points > 3000);
 
