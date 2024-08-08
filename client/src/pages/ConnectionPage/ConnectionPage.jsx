@@ -6,7 +6,7 @@ import { useUserContext } from "../../context/UseContext";
 
 export default function ConnectionPage() {
   const ApiUrl = import.meta.env.VITE_API_URL;
-  const {login} = useUserContext ();
+  const { login } = useUserContext();
   /* State to store the data in the form */
   const [connectionForm, setConnectionForm] = useState({
     username: "",
@@ -100,7 +100,7 @@ export default function ConnectionPage() {
         method: "post",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(dataForm),
-        credentials:"include",
+        credentials: "include",
       });
 
       if (response.status === 200) {
@@ -179,7 +179,7 @@ export default function ConnectionPage() {
             aria-label="connection"
             onClick={handleSubmit}
           >
-            connection
+            connexion
           </button>
           <Link to="/registration">
             <button

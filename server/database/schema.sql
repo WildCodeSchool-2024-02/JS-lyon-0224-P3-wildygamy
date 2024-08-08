@@ -1,17 +1,17 @@
 create table user (
-  id int unsigned primary key auto_increment not null,
-  pseudo varchar(50) not null unique,
-  lastname varchar(50) not null,
-  firstname varchar(50) not null,
-  email varchar(255) not null unique,
-  role varchar(50) not null,
-  password varchar(255) not null
+  id int unsigned primary key auto_increment NOT NULL,
+  pseudo varchar(50) NOT NULL unique,
+  lastname varchar(50) NOT NULL,
+  firstname varchar(50) NOT NULL,
+  email varchar(255) NOT NULL unique,
+  role varchar(50) NOT NULL,
+  password varchar(255) NOT NULL
 );
 
 create table game (
   id int unsigned primary key auto_increment not null,
-  name varchar(255) not null,
-  category VARCHAR(100) not null,
+  name varchar(255) NOT NULL,
+  category VARCHAR(100) NOT NULL,
   is_challenge BOOLEAN NOT NULL,
   is_popular BOOLEAN NOT NULL,
   image VARCHAR(255) NOT NULL,
@@ -20,7 +20,7 @@ create table game (
 
 create table prize (
   id INT unsigned PRIMARY KEY auto_increment NOT NULL,
-  name VARCHAR(80) NOT NULL,
-  image VARCHAR(255) NOT NULL,
-  points INT not null
+  name VARCHAR(30) NOT NULL,
+  image VARCHAR(50) NOT NULL,
+  points INT NOT NULL
 );
