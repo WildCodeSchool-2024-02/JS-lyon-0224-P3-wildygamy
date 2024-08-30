@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10rem;
+  gap: 8rem;
   margin: auto;
   background-image: url("../../assets/images/access.jpg");
   background-repeat: no-repeat;
@@ -11,7 +11,7 @@
   background-position: 80%;
   position: relative;
   max-width: 100vw;
-  height: 100vh;
+  height: 92.2vh;
 }
 
 .image {
@@ -37,7 +37,7 @@
 
 .connect {
   color: #f8f7ff;
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -47,6 +47,7 @@
     align-items: center;
     padding-top: 6rem;
     gap: 5rem;
+    height: 86vh;
   }
 
   .image {
@@ -60,6 +61,16 @@
   }
 
   .connect {
-    font-size: 1.2rem;
+    background-color: var(--main-color);
+    padding: 0.5rem 3rem;
+    border-radius: 1rem;
+    box-shadow:
+      0 0 8px #fff,
+      inset 0 0 8px #fff,
+      0 0 16px #a882dd,
+      inset 0 0 16px #a882dd,
+      0 0 32px #a882dd,
+      inset 0 0 32px #a882dd;
+    font-size: 1.5rem;
   }
 }
