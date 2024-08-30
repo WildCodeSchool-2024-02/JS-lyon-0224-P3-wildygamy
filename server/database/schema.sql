@@ -4,7 +4,7 @@ create table user (
   lastname varchar(50) NOT NULL,
   firstname varchar(50) NOT NULL,
   email varchar(255) NOT NULL unique,
-  role varchar(50) NOT NULL,
+  role varchar(10) NOT NULL,
   password varchar(255) NOT NULL
 );
 
