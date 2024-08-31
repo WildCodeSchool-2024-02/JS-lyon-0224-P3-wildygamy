@@ -112,6 +112,10 @@
   cursor: pointer;
 }
 
+.error {
+  color: var(--light-color);
+}
+
 @media (min-width: 768px) {
   .connectionCard {
     width: 40vw;

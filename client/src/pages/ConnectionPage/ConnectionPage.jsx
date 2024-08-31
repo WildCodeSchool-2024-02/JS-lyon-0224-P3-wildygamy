@@ -158,7 +158,7 @@ export default function ConnectionPage() {
             required
           />
           {formErrors.username !== "" && (
-            <div className="error">{formErrors.username}</div>
+            <div className={styles.error}>{formErrors.username}</div>
           )}
           <label htmlFor="password">Mot de passe</label>{" "}
           <input
@@ -171,7 +171,7 @@ export default function ConnectionPage() {
             required
           />
           {formErrors.password !== "" && (
-            <div className="error">{formErrors.password}</div>
+            <div className={styles.error}>{formErrors.password}</div>
           )}
           <button
             className={styles.buttonconnection}
